@@ -1,6 +1,8 @@
-// Lissajous and parametric curve equations
 // Carla de Beer
 // January 2014
+// Lissajous and parametric curve equations that generate geometric patterns 
+// similar to that created by a traditional spirograph
+// Change the parameters to the equations to generate different patterns
 
 float r = 165.0;
 float theta = 0.0;
