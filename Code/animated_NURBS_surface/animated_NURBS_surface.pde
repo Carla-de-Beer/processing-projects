@@ -1,6 +1,6 @@
 // Carla de Beer
 // January 2014
-// 'NURBS surface blowing in the wind'. 
+// An animated NURBS surface imbued with movement. 
 // NURBS algorithm based on that of Alasdair Turner's: http://www.openprocessing.org/sketch/8101
 
 import processing.video.*;
