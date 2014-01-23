@@ -1,17 +1,17 @@
 // Carla de Beer
 // Created November 2010
 // Updated January 2014
-// Mouse circles
+// Circles grid
 
 Circle [][] grid;
-final int COLS = 15;
-final int ROWS = 9;
-final float SPACING = 80;
-final int SIZE = 33;
+final int COLS = 18;
+final int ROWS = 12;
+final float SPACING = 45;
+final int SIZE = 22;
 
 void setup()
 {
-  size(1300, 800);
+  size(900,600);
   noStroke();
   smooth();
   ellipseMode(CENTER);
