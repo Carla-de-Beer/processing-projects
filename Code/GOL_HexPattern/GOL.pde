@@ -71,11 +71,12 @@ class GOL {
   void display() {
     for ( int i = 0; i < columns;i++) {
       for ( int j = 0; j < rows;j++) {
+        fill(255);
+        if ( (i % 2 == j % 2)) fill(230);
         if (board[i][j].previous == 0 && board[i][j].state == 1) fill(0, 255, 0);
         else if (board[i][j].state == 1) fill(0, 0, 255);
         else if (board[i][j].previous == 1 && board[i][j].state == 0) fill(255, 0, 0);
-        else fill(255);
-        //if ( (i % 3 == 0)) fill(150);
+        //else fill(255);
         board[i][j].display();
       }
     }
