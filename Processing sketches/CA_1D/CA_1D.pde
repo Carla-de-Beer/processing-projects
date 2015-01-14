@@ -3,9 +3,9 @@
 // 1D Cellular Automata played out on a 2D lozenge-shaped grid
 
 // Rule set
-// Modify the input values here
+// Modify the input values here:
 int [] response = {
-  0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0
+  0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0
 }; // rules
 
 Cell [][] cell;
@@ -34,28 +34,26 @@ void draw()
   translate(0, width/n *sin(radians(60)));
 
 
-  // Modify the input values here
+  // Modify the input values here:
   for (int i = 0; i < num; ++i) {
     for (int j = 0; j < jVal; ++j) {
       if ( (i == 0 && j == 0) || (i == 21 && j == 0) || (i == 25 && j == 0) || (i == 27 && j == 0)
         || (i == 28 && j == 0) || (i == 5 && j == 0) || (i == 42 && j == 0)
-        || (i == 44 && j == 0) || (i == 45 && j == 0) || (i == 46 && j == 0)  
-        || (i == 47 && j == 0) || (i == 51 && j == 0) || (i == 54 && j == 0) 
-        || (i == 55 && j == 0) || (i == 56 && j == 0) || (i == 57 && j == 0) 
-        || (i == 60 && j == 0) || (i == 61 && j == 0) || (i == 62 && j == 0) 
-        || (i == 65 && j == 0) || (i == 68 && j == 0) || (i == 72 && j == 0) 
-        || (i == 77 && j == 0) || (i == 79 && j == 0) || (i == 88 && j == 0) 
+        || (i == 44 && j == 0) || (i == 50 && j == 0) || (i == 46 && j == 0)  
+        || (i == 55 && j == 0) || (i == 56 && j == 0) || (i == 65 && j == 0) 
+        || (i == 72 && j == 0) || (i == 79 && j == 0) || (i == 88 && j == 0) 
         ) 
         cell[i][j].value = true;
 
       else if (cell[i][j].value == true) fill(100);
-      else fill(240, 128);
+      else fill(255);
 
       cell[i][j].display();
 
       int val = 0;
       //println("i = " + i);
       //println("j = " + j);
+      
       if (cell[(i-1 + num) % num][(j-1 + jVal) % jVal].value == true) {
         val+=16; // 2 to power of 4 = 16
       }

@@ -17,10 +17,7 @@ class Cell {
   }
 
   void display() {
-
-    //noStroke();
-    //fill(220,128);
-
+    
     stroke(170);
     pushMatrix();
     translate(x, y);
