@@ -32,10 +32,6 @@ void setup() {
   player.play();
   meta = player.getMetaData();
   font = loadFont("Consolas-48.vlw");
-
-  lights();
-  directionalLight(126, 126, 126, 1, 1, 1);
-  ambientLight(102, 102, 102);
 }
 
 void draw() {
@@ -134,6 +130,11 @@ void draw() {
   pushMatrix();
   translate(width/2+100, height/2+300, -190);
   rotateX(PI/4);
+
+  lights();
+  directionalLight(126, 126, 126, 1, 1, 1);
+  ambientLight(102, 102, 102);
+
   land.render();
   popMatrix();
 

@@ -24,11 +24,6 @@ void setup() {
   size(650, 650, OPENGL);
   gol = new GOL();
 
-  lights();
-  directionalLight(126, 126, 126, 1, 1, 1);
-  ambientLight(102, 102, 102);
-
-  smooth();
   eye = new PVector(width/6, (height/6)*5, -width/1.15);
   center = new PVector(275, 250, 100);
   up = new PVector(0, 0, 1);
@@ -37,12 +32,17 @@ void setup() {
 void draw() {
   /*
   if (record == true) {
-    beginRaw(DXF, "output.dxf"); // Start recording to the file
-  }
-  */
+   beginRaw(DXF, "output.dxf"); // Start recording to the file
+   }
+   */
   if (noPause) {
 
-    background(255);;
+    background(255);
+
+    lights();
+    directionalLight(126, 126, 126, 1, 1, 1);
+    ambientLight(102, 102, 102);
+
     camera(eye.x, eye.y, eye.z, center.x, center.y, center.z, up.x, up.y, up.z);
     gol.generate();
     gol.display();
@@ -54,7 +54,7 @@ void draw() {
     box(500, 500, 60);
     popMatrix();
   }
-  
+
   /*
   if (record == true) {
    endRaw();
