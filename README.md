@@ -7,5 +7,4 @@ These sketches are examples that have been developed over the years. Most make u
 
 For video footage of this work in action, go to the Vimeo site: http://vimeo.com/carladebeer/videos.
 
-![alt tag](SuperShapes/SuperShapes3D_Controls/screen-12057.jpg)
 
