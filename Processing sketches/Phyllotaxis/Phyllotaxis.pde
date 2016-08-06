@@ -16,12 +16,12 @@ void setup() {
 
 void draw() {
 
-  float phi = n * 137.3;
+  float phi = n * 137.5;
   float r = c * sqrt(n);
   float x = r * cos(phi) + width/2;
   float y = r * sin(phi) + height/2;
-  //fill(phi % 256, 255, 255);
-  fill(n/2 - (n % 256), 255 - n/50, 80);
+  fill(phi % 256, 60, 80);
+  //fill(n/3 - (n*2 % 256), 255 - n/20, 90);
   //fill((255- r*2) % 256, 255, 200);
   //fill((phi-r) % 256, 255, 255);
   //ellipse(x, y, 3, 3);

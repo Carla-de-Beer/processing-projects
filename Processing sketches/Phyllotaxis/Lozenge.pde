@@ -16,13 +16,15 @@ class Lozenge {
 
   void display() {
     if (n > 150) {
-      stroke(180, (int) n/7);
+      //stroke(180, (int) n/7);
+      //noStroke();
     } else {
-      stroke(180, 200);
+      stroke(190, 200);
     }
 
     pushMatrix();
     translate(x, y);
+    rotate(radians(n/7));
     beginShape();
 
     vertex(0, 0);
