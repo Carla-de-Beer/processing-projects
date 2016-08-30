@@ -3,6 +3,11 @@ import java.util.Collections;
 ArrayList<City> path = new ArrayList();
 ArrayList<City> randPath = new ArrayList();
 
+float bestEverFitness = Float.POSITIVE_INFINITY;
+ArrayList<City> bestEverRoute = new ArrayList();
+
+int iter = 0;
+
 String[] names = { "New York", "Philadelphia", "Chicago", "Dallas", "Houston", "Phoenix", "San Diego", "San Antonio", "Los Angeles", "San Jose" };
 float[] lat = { 40.7127837, 39.9525839, 41.8781136, 32.7766642, 29.7604267, 29.4241219, 33.4483771, 32.715738, 34.0522342, 37.3382082 };
 float[] lon = { -74.0059413, -75.1652215, -87.6297982, -96.79698789999999, -95.3698028, -98.49362819999999, -112.0740373, -117.1610838, -118.2436849, -121.8863286 };
@@ -11,7 +16,8 @@ int NUM_CITIES = 10;
 CityRoute route;
 RandomStrategy randomStrategy;
 
-int maxIter = 1000;
+int stop = 0;
+int maxIter = 3000;
 int numPop = 100;
 float crossoverRate = 80.0;
 float mutationRate = 5.0;
@@ -32,8 +38,6 @@ void setup() {
 }
 
 void draw() {
-
-  background(0);
 
   route = new CityRoute(path);
   randomStrategy = new RandomStrategy(path, numPop, maxIter, crossoverRate, mutationRate, percentageGap);
@@ -103,39 +107,37 @@ void draw() {
 
       randomStrategy.newPopulationList.add(new2);
       randomStrategy.newPopulationList.add(new1);
-    }
+    } // end inner while
 
     counter++;
-
     randomStrategy.getOptimal();
 
     // -------------------------------------------------
-    StringBuilder sb = new StringBuilder(NUM_CITIES);
-    for (int i = 0; i < NUM_CITIES; ++i) {
-      sb.append(randomStrategy.optimalRoute.getChromosome().get(i).getName());
-      if (i < NUM_CITIES - 1) {
-        sb.append("->");
-      }
-    }
 
+    background(0);
     beginShape();
     noFill();
-    stroke(100, 200);
+    stroke(255, 200);
     strokeWeight(1);
     for (City c : randomStrategy.getBestSolution()) {
       vertex(c.lat, c.lon);
     }
     endShape();
 
+    /// highlight ellipse
+    for (City v : path) {
+      fill(250);
+      ellipse(v.lat, v.lon, 8, 8);
+      text(v.name, v.lat + 8, v.lon + 8);
+    }
+
     // -------------------------------------------------
 
-    // System.out.println(getBestFitness() + ": " + sb.toString());
-    System.out.println(randomStrategy.getBestFitness());
+    //System.out.println(randomStrategy.getBestFitness());
     sum += randomStrategy.getBestFitness();
 
     // Apply elitism, only if the generation gap > 0
     if (randomStrategy.generationGap > 0) {
-
       randomStrategy.createCurrentFitnessList(randomStrategy.currentPopulationList);
       randomStrategy.createNextFitnessList(randomStrategy.newPopulationList);
 
@@ -163,7 +165,6 @@ void draw() {
       // consisting of the best part of the current generation
       // replacing the worst part of the next generation
       ArrayList<CityRoute> handOver = new ArrayList();
-
       for (int i = randomStrategy.numPop
         - randomStrategy.generationGap; i < randomStrategy.currentPopulationList.size(); ++i)
         handOver.add(randomStrategy.currentPopulationList.get(i));
@@ -175,35 +176,59 @@ void draw() {
     }
     // Else if the generation gap value is zero,
     // replace entire current generation with the new generation
-    else
+    else {
       randomStrategy.currentPopulationList = new ArrayList(randomStrategy.newPopulationList);
+    }
 
     randomStrategy.newPopulationList.clear();
+  } // end outer while
+
+  iter++;
+
+  ///////////////////////////////////////
+
+  CityRoute currentBestRoute = new CityRoute(randomStrategy.getOptimalRoute());
+  //println(currentBestRoute.getChromosome().get(0).getName());
+  currentBestRoute.calculateFitness();
+  //println(currentBestRoute.getFitness());
+
+  ArrayList<City> currentBestSolution = new ArrayList();
+  for (int i = 0; i < NUM_CITIES; ++i) {
+    currentBestSolution.add(randomStrategy.getBestSolution().get(i));
+  }
+
+  if (currentBestRoute.getFitness() < bestEverFitness) {
+    bestEverRoute.clear();
+    bestEverFitness = currentBestRoute.getFitness();
+    for (int i = 0; i < NUM_CITIES; ++i) {
+      bestEverRoute.add(currentBestSolution.get(i));
+    }
   }
 
   // output average fitness value after each generation
   randomStrategy.average = sum / (randomStrategy.maxIter);
-  System.out.println();
-  randomStrategy.printEndInfo();
-  // return randomStrategy.optimalRoute;
-
-  ///////////////////////////////////////
 
   beginShape();
   noFill();
   stroke(255, 0, 120, 200);
   strokeWeight(3);
-  for (City c : randomStrategy.getBestSolution()) {
+  for (City c : bestEverRoute) {
     vertex(c.lat, c.lon);
   }
   endShape();
 
-  /// highlight ellipse
-  for (City v : path) {
-    fill(255, 220);
-    ellipse(v.lat, v.lon, 8, 8);
-    text(v.name, v.lat + 8, v.lon + 8);
-  }
-
-  text("Shortest route: " + randomStrategy.getBestFitness(), 45, height - 45);
+  fill(255, 200);
+  text("Iterations: " + iter, 45, height - 175);
+  text("Max. no. generations/iteration: " + maxIter, 45, height - 155);
+  text("Population size: " + numPop, 45, height - 135);
+  text("Crossover rate: " + crossoverRate + "%", 45, height - 115);
+  text("MutationRate: " + mutationRate + "%", 45, height - 95);
+  text("Elitism gap: " + percentageGap + "%", 45, height - 75);
+  text("Current shortest route: " + randomStrategy.getBestFitness() + " km", 45, height - 55);
+  text("Shortest route over " + iter + " iterations:", 45, height - 35);
+  fill(255, 0, 120, 200);
+  text(bestEverFitness + " km", 240, height - 35);
+  fill(255, 200);
+  strokeWeight(1);
+  line(241, height - 30, 325, height - 30);
 }

@@ -16,6 +16,14 @@ class CityRoute {
     Collections.shuffle(chromosome);
   }
 
+  // Copy constructor
+  CityRoute(CityRoute other) {
+    this.chromosome = new ArrayList();
+    for (City c : other.getChromosome()) {
+      this.chromosome.add(c);
+    }
+  }
+
   float calculateFitness() {
     float sum = sumDistance(chromosome);
     fitness = sum;
@@ -41,11 +49,11 @@ class CityRoute {
     return fitness;
   }
 
-  public final ArrayList<City> getChromosome() {
+  ArrayList<City> getChromosome() {
     return chromosome;
   }
 
-  public void setChromosome(ArrayList<City> chromosome) {
+  void setChromosome(ArrayList<City> chromosome) {
     this.chromosome = chromosome;
   }
 }

@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 class RandomStrategy {
-  
+
   int NUM_CITIES = 10;
   int numPop;
   int maxIter;
@@ -39,8 +39,7 @@ class RandomStrategy {
     this.optimalValue = Float.POSITIVE_INFINITY;
   }
 
-  // The crossover strategy makes use of Modified Order Crossover (MOX),
-  // as described in:
+  // The crossover strategy makes use of Modified Order Crossover (MOX), as described in:
   // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.9167&rep=rep1&type=pdf
   void crossover(ArrayList<City> parentA, ArrayList<City> parentB, ArrayList<City> childA, 
     ArrayList<City> childB) {
