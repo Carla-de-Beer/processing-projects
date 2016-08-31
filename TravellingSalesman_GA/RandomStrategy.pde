@@ -4,7 +4,7 @@ import java.util.Collections;
 
 class RandomStrategy {
 
-  int NUM_CITIES = 10;
+  int NUM_CITIES = 20;
   int numPop;
   int maxIter;
   float crossoverRate;
@@ -14,7 +14,6 @@ class RandomStrategy {
   CityRoute optimalRoute;
   float optimalValue;
   float average = 0.0;
-  MyRandom myRandom = new MyRandom();
 
   ArrayList<City> path = new ArrayList();
   ArrayList<CityRoute> newPopulationList = new ArrayList();
@@ -47,7 +46,7 @@ class RandomStrategy {
     ArrayList<City> endA = new ArrayList();
     ArrayList<City> endB = new ArrayList();
 
-    int rand = myRandom.randomInt(NUM_CITIES);
+    int rand = (int) random(NUM_CITIES);
 
     // Copy over first part of the chromosome
     for (int i = 0; i < rand; ++i) {
@@ -101,8 +100,8 @@ class RandomStrategy {
   }
 
   void mutate(ArrayList<City> path) {
-    int rand1 = myRandom.randomInt(NUM_CITIES);
-    int rand2 = myRandom.randomInt(NUM_CITIES);
+    int rand1 = (int) random(NUM_CITIES);
+    int rand2 = (int) random(NUM_CITIES);
     Collections.swap(path, rand1, rand2);
   }
 
@@ -202,10 +201,5 @@ class RandomStrategy {
         arr2[minIndex] = tmp2;
       }
     }
-  }
-
-  void printEndInfo() {
-    println("\nProcessing complete.\n");
-    println("\n****************************************************");
   }
 }

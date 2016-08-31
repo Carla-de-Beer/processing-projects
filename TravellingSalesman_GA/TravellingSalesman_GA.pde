@@ -1,39 +1,40 @@
 import java.util.Collections;
 
+int NUM_CITIES = 20;
+int iter = 0;
+int maxIter = 2000;
+int numPop = 200;
+float crossoverRate = 55.0;
+float mutationRate = 15.0;
+float percentageGap = 5.0;
+
+CityRoute route;
+RandomStrategy randomStrategy;
+
 ArrayList<City> path = new ArrayList();
 ArrayList<City> randPath = new ArrayList();
 
 float bestEverFitness = Float.POSITIVE_INFINITY;
 ArrayList<City> bestEverRoute = new ArrayList();
 
-int iter = 0;
+String[] names = { "New York", "Los Angeles", "Chicago", "Houston", "Philadelphia", "Phoenix", "San Antonio", "San Diego", "Dallas", "San Jose", 
+  "Austin", "Indianapolis", "Jacksonville", "San Francisco", "Columbus", "Charlotte", "Fort Worth", "Detroit", "El Paso", "Memphis" };
 
-String[] names = { "New York", "Philadelphia", "Chicago", "Dallas", "Houston", "Phoenix", "San Diego", "San Antonio", "Los Angeles", "San Jose" };
-float[] lat = { 40.7127837, 39.9525839, 41.8781136, 32.7766642, 29.7604267, 29.4241219, 33.4483771, 32.715738, 34.0522342, 37.3382082 };
-float[] lon = { -74.0059413, -75.1652215, -87.6297982, -96.79698789999999, -95.3698028, -98.49362819999999, -112.0740373, -117.1610838, -118.2436849, -121.8863286 };
+float[] lat = { 40.7127837, 34.0522342, 41.8781136, 29.7604267, 39.9525839, 33.4483771, 29.4241219, 32.715738, 32.7766642, 37.3382082, 
+  30.267153, 39.768403, 30.3321838, 37.7749295, 39.9611755, 35.2270869, 32.7554883, 42.331427, 31.7775757, 35.1495343 };
 
-int NUM_CITIES = 10;
-CityRoute route;
-RandomStrategy randomStrategy;
-
-int stop = 0;
-int maxIter = 3000;
-int numPop = 100;
-float crossoverRate = 80.0;
-float mutationRate = 5.0;
-float percentageGap = 5.0;
+float[] lon = { -74.0059413, -118.2436849, -87.6297982, -95.3698028, -75.1652215, -112.0740373, -98.49362819999999, -117.1610838, -96.79698789999999, -121.8863286, 
+  -97.7430608, -86.158068, -81.65565099999999, -122.4194155, -82.99879419999999, -80.8431267, -97.3307658, -83.0457538, -106.4424559, -90.0489801 };
 
 void setup() {
-  size(700, 700);
+  size(700, 800);
   for (int i = 0; i < names.length; ++i) {
-    float x = map(lat[i], 29.4241219, 41.8781136, 70, width-70);
-    float y = map(lon[i], -121.8863286, -74.0059413, 70, height-70);
+    float x = map(lat[i], 29.4241219, 42.331427, 70, width - 70);
+    float y = map(lon[i], -122.4194155, -74.0059413, 70, height - 150);
     path.add(new City(x, y, names[i]));
   }
 
-  for (int i = 0; i < path.size(); ++i) {
-    randPath.add(path.get(i));
-  }
+  randPath = new ArrayList<City>(path); 
   Collections.shuffle(randPath);
 }
 
@@ -58,8 +59,7 @@ void draw() {
   // Outer while loop that runs for the number of generations required
   while (counter < randomStrategy.maxIter) {
 
-    // Inner while loop that fills the newPopulationList ArrayList
-    // before elitism is applied
+    // Inner while loop that fills the newPopulationList ArrayList before elitism is applied
     while (randomStrategy.newPopulationList.size() < randomStrategy.numPop) {
 
       ArrayList<City> parentA = new ArrayList();
@@ -67,18 +67,15 @@ void draw() {
       ArrayList<City> childA = new ArrayList();
       ArrayList<City> childB = new ArrayList();
 
-      // Randomly select two parents from the population of
-      // Routes
-      int rand1 = randomStrategy.myRandom.randomInt(randomStrategy.numPop);
-      int rand2 = randomStrategy.myRandom.randomInt(randomStrategy.numPop);
+      // Randomly select two parents from the population of CityRoutes
+      int rand1 = (int) random((randomStrategy.numPop));
+      int rand2 = (int) random((randomStrategy.numPop));
 
       parentA = (randomStrategy.currentPopulationList.get(rand1).getChromosome());
       parentB = (randomStrategy.currentPopulationList.get(rand2).getChromosome());
 
       float crossRand = (float) Math.random();
       float muteRand = (float) Math.random();
-
-      // System.out.println();
 
       // Crossover, if applicable
       if (randomStrategy.crossoverRate > crossRand) {
@@ -97,8 +94,7 @@ void draw() {
         randomStrategy.mutate(childB);
       }
 
-      // Populate the ArrayList newPopulation
-      // with the offspring
+      // Populate the ArrayList newPopulation with the offspring
       CityRoute new1 = new CityRoute(path);
       CityRoute new2 = new CityRoute(path);
 
@@ -124,16 +120,8 @@ void draw() {
     }
     endShape();
 
-    /// highlight ellipse
-    for (City v : path) {
-      fill(250);
-      ellipse(v.lat, v.lon, 8, 8);
-      text(v.name, v.lat + 8, v.lon + 8);
-    }
-
     // -------------------------------------------------
 
-    //System.out.println(randomStrategy.getBestFitness());
     sum += randomStrategy.getBestFitness();
 
     // Apply elitism, only if the generation gap > 0
@@ -160,10 +148,8 @@ void draw() {
       randomStrategy.currentPopulationList = new ArrayList(Arrays.asList(listRouterArray));
       randomStrategy.newPopulationList = new ArrayList(Arrays.asList(newlistRouteArray));
 
-      // Create a new ArrayList handOver that forms the hand over
-      // from one generation to the next,
-      // consisting of the best part of the current generation
-      // replacing the worst part of the next generation
+      // Create a new ArrayList handOver that forms the hand over from one generation to the next, 
+      // consisting of the best part of the current generation replacing the worst part of the next generation.
       ArrayList<CityRoute> handOver = new ArrayList();
       for (int i = randomStrategy.numPop
         - randomStrategy.generationGap; i < randomStrategy.currentPopulationList.size(); ++i)
@@ -177,7 +163,7 @@ void draw() {
     // Else if the generation gap value is zero,
     // replace entire current generation with the new generation
     else {
-      randomStrategy.currentPopulationList = new ArrayList(randomStrategy.newPopulationList);
+      randomStrategy.currentPopulationList = new ArrayList<CityRoute>(randomStrategy.newPopulationList);
     }
 
     randomStrategy.newPopulationList.clear();
@@ -188,9 +174,7 @@ void draw() {
   ///////////////////////////////////////
 
   CityRoute currentBestRoute = new CityRoute(randomStrategy.getOptimalRoute());
-  //println(currentBestRoute.getChromosome().get(0).getName());
   currentBestRoute.calculateFitness();
-  //println(currentBestRoute.getFitness());
 
   ArrayList<City> currentBestSolution = new ArrayList();
   for (int i = 0; i < NUM_CITIES; ++i) {
@@ -216,7 +200,28 @@ void draw() {
     vertex(c.lat, c.lon);
   }
   endShape();
+  strokeWeight(1);
 
+  // display city nodes
+  for (City v : path) {
+    fill(250);
+    ellipse(v.lat, v.lon, 8, 8);
+    if (v.name == "Fort Worth") {
+      text(v.name, v.lat - 8, v.lon - 8);
+    } else  if (v.name == "San Jose" ) {
+      text(v.name, v.lat + 10, v.lon + 14);
+    } else  if (v.name == "San Antonio") {
+      text(v.name, v.lat + 8, v.lon);
+    } else text(v.name, v.lat + 11, v.lon + 4);
+  }
+
+  String resString1 = convertToCommaString(randomStrategy.getBestFitness());
+  String resString2 = convertToCommaString(bestEverFitness);
+
+  printText(resString1, resString2);
+}
+
+void printText(String resString1, String resString2) {
   fill(255, 200);
   text("Iterations: " + iter, 45, height - 175);
   text("Max. no. generations/iteration: " + maxIter, 45, height - 155);
@@ -224,11 +229,37 @@ void draw() {
   text("Crossover rate: " + crossoverRate + "%", 45, height - 115);
   text("MutationRate: " + mutationRate + "%", 45, height - 95);
   text("Elitism gap: " + percentageGap + "%", 45, height - 75);
-  text("Current shortest route: " + randomStrategy.getBestFitness() + " km", 45, height - 55);
+  text("Current shortest route: " + resString1.toString(), 45, height - 55);
   text("Shortest route over " + iter + " iterations:", 45, height - 35);
-  fill(255, 0, 120, 200);
-  text(bestEverFitness + " km", 240, height - 35);
-  fill(255, 200);
+
+  fill(255);
   strokeWeight(1);
-  line(241, height - 30, 325, height - 30);
+
+  if (iter < 10) {
+    text(resString2.toString(), 236, height - 35);
+    fill(255, 200);
+    fill(255, 0, 120, 200);
+    line(237, height - 30, 304, height - 30);
+  } else if (iter >= 10 && iter < 100) {
+    text(resString2.toString(), 244, height - 35);
+    fill(255, 200);
+    fill(255, 0, 120, 200);
+    line(245, height - 30, 312, height - 30);
+  } else {
+    text(resString2.toString(), 252, height - 35);
+    fill(255, 200);
+    fill(255, 0, 120, 200);
+    line(253, height - 30, 320, height - 30);
+  }
+  //saveFrame();
+}
+
+String convertToCommaString(Float fitness) {
+  String fitnessString = "";
+  StringBuilder resString;
+  fitnessString = String.format("%.2f", fitness);
+  resString = new StringBuilder(fitnessString);
+  int index1 = fitnessString.indexOf('.');
+  resString.insert(index1 - 3, ',');
+  return resString.toString();
 }

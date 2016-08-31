@@ -8,20 +8,14 @@ class CityRoute {
   float normFitness;
 
   CityRoute(ArrayList<City> path) {
-    this.chromosome = new ArrayList();
-    for (City c : path) {
-      this.chromosome.add(c);
-    }
+    this.chromosome  = new ArrayList<City>(path); 
     // Shuffle the ArrayList to obtain different permutations
     Collections.shuffle(chromosome);
   }
 
   // Copy constructor
   CityRoute(CityRoute other) {
-    this.chromosome = new ArrayList();
-    for (City c : other.getChromosome()) {
-      this.chromosome.add(c);
-    }
+    this.chromosome  = new ArrayList<City>(other.getChromosome()); 
   }
 
   float calculateFitness() {
@@ -35,7 +29,7 @@ class CityRoute {
     for (int i = 0; i < path.size() - 1; ++i) {
       City a = path.get(i);
       City b = path.get(i + 1);
-      float d = distSq(a.getLon(), a.getLat(), b.getLon(), b.getLat());
+      float d = distSq(a.lon, a.lat, b.lon, b.lat);
       sum += d;
     }
     return sum;

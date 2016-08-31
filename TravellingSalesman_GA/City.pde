@@ -8,16 +8,4 @@ class City {
     this.lon = lon;
     this.name = name;
   }
-
-  String getName() {
-    return name;
-  }
-
-  float getLon() {
-    return lon;
-  }
-
-  float getLat() {
-    return lat;
-  }
 }
