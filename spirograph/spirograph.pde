@@ -8,7 +8,6 @@ float r = 165.0;
 float theta = 0.0;
 public static final int STOP = 90;
 
-
 void setup() {
   size(650, 650);
   background(255);
@@ -16,8 +15,7 @@ void setup() {
 }
 
 void draw() {
-  if (theta <= STOP)
-  {
+  if (theta <= STOP) {
     //float x = r*cos(theta); //circle
     //float y = r*sin(theta); //circle
 
@@ -34,8 +32,8 @@ void draw() {
     float a = pow(exp(1.0), cos(theta));
      float b = 2*cos(4*theta);
      float c = pow(sin(theta/12), 5);
-     float x = r*sin(theta)*(a - b - c);// butterfly
-     float y = r*cos(theta)*(a - b - c);// butterfly
+     float x = r*sin(theta)*(a - b - c); // butterfly
+     float y = r*cos(theta)*(a - b - c); // butterfly
      */
 
     //float x = r*3*sin(11*theta + PI/2); // lissajous
@@ -55,9 +53,7 @@ void draw() {
   }
 }
 
-void keyReleased()
-{
+void keyReleased() {
   if (key == 'R' || key == 'r') setup();
   if (key == 'S' || key == 's') saveFrame();
 }
-
