@@ -66,7 +66,7 @@ void draw() {
     beginShape();
     noFill();
     stroke(255, 200);
-    strokeWeight(3);
+    strokeWeight(2);
     for (City c : randomStrategy.getBestSolution()) {
       stroke(255, 0, 120, 200);
       vertex((float)c.lat, (float)c.lon);
@@ -74,7 +74,7 @@ void draw() {
     endShape();
 
     strokeWeight(1);
-    stroke(255, 0, 120, 200);
+    stroke(255, 0, 120);
     fill(255);
 
     for (City c : path) {
@@ -144,7 +144,6 @@ void init() {
   maxLon = tmpLon.get(0);
   minLon = tmpLon.get(tmpLon.size() - 1);
 
-  fill(255, 0, 0);
   for (int i = 0; i < latList.size(); ++i) {
     float xx = map(latList.get(i), minLat, maxLat, 50, width - 100);
     float yy = map(lonList.get(i), minLon, maxLon, 45, height - 192);
