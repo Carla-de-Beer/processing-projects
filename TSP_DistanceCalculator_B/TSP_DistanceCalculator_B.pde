@@ -218,9 +218,9 @@ void printText(String haversineDistance) {
   text("Travelling to the " + NUM_CITIES + " largest cities in the US ", 45, height - 135);
   text("Iterations: " + convertToCommaString(iter), 45, height - 115);
   text("Population size: " + convertToCommaString(numPop) + " individuals", 45, height - 95);
-  text(": Crossover rate: " + crossoverRate + "%", 170, height - 75);
-  text("Mutation rate: " + mutationRate + "%", 45, height - 75);
+  text("Crossover rate: " +crossoverRate + "%", 45, height - 75);
+  text("|  Mutation rate: " + mutationRate + "%", 179, height - 75);
   text("Elitism generation gap: " + randomStrategy.numElite + " individuals", 45, height - 55);
   text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", 45, height - 35);
-  text("Convergence at iteration: " + res, 500, height - 35);
+  text("|  Convergence at iteration: " + res, 400, height - 35);
 }
