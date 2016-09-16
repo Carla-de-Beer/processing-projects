@@ -31,6 +31,9 @@ City[] pathTrue = new City[NUM_CITIES];
 
 Route bestEver;
 
+color pink = color(255, 0, 120);
+color white = color(250);
+
 void setup() {
   size(700, 800);
   maxPop = 2500;
@@ -58,7 +61,7 @@ void draw() {
 
     beginShape();
     noFill();
-    stroke(255, 150);
+    stroke(white, 150);
     strokeWeight(1);
     for (City v : best.chromosome) {
       vertex(v.lat, v.lon);
@@ -67,7 +70,7 @@ void draw() {
 
     beginShape();
     noFill();
-    stroke(255, 0, 120);
+    stroke(pink);
     strokeWeight(2);
     for (City v : bestEver.chromosome) {
       vertex(v.lat, v.lon);
@@ -76,7 +79,7 @@ void draw() {
 
     // display city nodes and names
     for (City v : path) {
-      fill(250);
+      fill(white);
       strokeWeight(1);
       textSize(12);
       ellipse(v.lat, v.lon, 8, 8);
@@ -119,7 +122,7 @@ void draw() {
 }
 
 void init() {
-  fill(255);
+  fill(white);
   text("Parsing the city data", 250, 350);
   
   // Load the city data 
@@ -185,7 +188,7 @@ String convertToCommaString(double fitness) {
 }
 
 void printText(float fitness, String haversineDistance) {
-  fill(255, 200);
+  fill(white, 200);
   text("Travelling to the " + NUM_CITIES + " largest cities in the US ", 45, height - 135);
   text("Iterations: " + population.generations, 45, height - 115);
   text("Population size: " + maxPop, 45, height - 95);

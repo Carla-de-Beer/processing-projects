@@ -38,9 +38,12 @@ ArrayList<City> path = new ArrayList();
 ArrayList<City> pathTrue = new ArrayList();
 ArrayList<Route> populationList = new ArrayList<Route>();
 
+color pink = color(255, 0, 120);
+color white = color(250);
+
 void setup() {
   size(700, 800);
-  frameRate(30);
+  frameRate(60);
   reader = createReader("cities.txt");
 }
 
@@ -52,12 +55,13 @@ void draw() {
   }
 
   if (frameCount < NUM_CITIES + 10) {
+    textSize(20);
     path.clear();
     pathTrue.clear();
-    textSize(20);
     init();
   } else if (frameCount >= NUM_CITIES + 10) {
     textSize(12);
+
     randomStrategy.calculateOptimal();
     randomStrategy.calculateBestEver();
     randomStrategy.generatePopulation();
@@ -65,7 +69,7 @@ void draw() {
 
     beginShape();
     noFill();
-    stroke(255, 200);
+    stroke(pink, 200);
     strokeWeight(2);
     for (City c : randomStrategy.getBestSolution()) {
       stroke(255, 0, 120, 200);
@@ -74,8 +78,7 @@ void draw() {
     endShape();
 
     strokeWeight(1);
-    stroke(255, 0, 120);
-    fill(255);
+    fill(white);
 
     for (City c : path) {
       ellipse((float)c.lat, (float)c.lon, 5, 5);
@@ -127,7 +130,7 @@ double haversine(double lat1, double lat2, double lon1, double lon2) {
 }
 
 void init() {
-  fill(255);
+  fill(white);
   text("Parsing the city data", 250, 350);
   parse(reader, latList, lonList, nameList);
 
@@ -202,10 +205,10 @@ String convertToCommaString(int value) {
 }
 
 void printText(String haversineDistance) {
-  fill(255, 200);
+  fill(white, 200);
   text("Travelling to the " + NUM_CITIES + " largest cities in the US ", 45, height - 135);
   text("Iterations: " + convertToCommaString(iter), 45, height - 115);
-  text("Population size: " + convertToCommaString(numPop), 45, height - 95);
+  text("Population size: " + convertToCommaString(numPop) + " individuals", 45, height - 95);
   text(": Crossover rate: " + crossoverRate + "%", 170, height - 75);
   text("Mutation rate: " + mutationRate + "%", 45, height - 75);
   text("Elitism generation gap: " + randomStrategy.numElite + " individuals", 45, height - 55);
