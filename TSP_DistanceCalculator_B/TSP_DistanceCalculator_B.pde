@@ -25,8 +25,8 @@ ArrayList<Float> tmpLon = new ArrayList();
 
 int NUM_CITIES = 35;
 int iter = 0;
-int maxIter = 125;
-int numPop = 1500;
+int maxIter = 500;
+int numPop = 2000;
 double crossoverRate = 85.0;
 double mutationRate = 25.0;
 double generationGap = 20.0;
@@ -81,7 +81,7 @@ void draw() {
     fill(white);
 
     for (City c : path) {
-      ellipse((float)c.lat, (float)c.lon, 5, 5);
+      ellipse((float)c.lat, (float)c.lon, 8, 8);
       if (c.name.equals("Washington") || c.name.equals("Seattle") || 
         c.name.equals("Indianapolis") || c.name.equals("Oklahoma City") || 
         c.name.equals("Portland") || c.name.equals("Milwaukee") ||
