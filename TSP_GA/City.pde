@@ -9,7 +9,6 @@ class City {
     this.name = name;
   }
 
-  // Copy constructor
   public City(City other) {
     this.lat = other.lat;
     this.lon = other.lon;
@@ -27,4 +26,5 @@ class City {
   public double getLat() {
     return lat;
   }
+  
 }

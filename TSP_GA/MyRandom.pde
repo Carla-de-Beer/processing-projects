@@ -22,4 +22,5 @@ class MyRandom {
     double randomNum = 1 * rand.nextDouble();
     return randomNum;
   }
+  
 }

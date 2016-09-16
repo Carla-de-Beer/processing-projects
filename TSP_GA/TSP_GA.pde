@@ -14,20 +14,18 @@ import java.util.ArrayList;
 
 int NUM_CITIES = 20;
 int iter = 0;
-int maxIter = 200;
-int numPop = 750;
-double crossoverRate = 80.0;
-double mutationRate = 15.0;
-double generationGap = 5.0;
+int maxIter = 250;
+int numPop = 1000;
+double crossoverRate = 85.0;
+double mutationRate = 20.0;
+double generationGap = 15.0;
 double sumHaversine = 0.0;
 
-Route route;
 RandomStrategy randomStrategy;
 
 ArrayList<City> path = new ArrayList();
 ArrayList<City> pathTrue = new ArrayList();
 ArrayList<Route> populationList = new ArrayList<Route>();
-float bestEverFitness = Float.POSITIVE_INFINITY;
 
 String[] names = {"New York", "Los Angeles", "Chicago", "Houston", "Philadelphia", "Phoenix", "San Antonio", "San Diego", "Dallas", "San Jose", 
   "Austin", "Indianapolis", "Jacksonville", "San Francisco", "Columbus", "Charlotte", "Fort Worth", "Detroit", "El Paso", "Memphis"};

@@ -38,7 +38,6 @@ class RandomStrategy {
   }
 
   public void runGA() {
-    printStartInfo();
     int counter = 0;
 
     // Outer while loop that runs for the number of generations required
@@ -218,31 +217,5 @@ class RandomStrategy {
   public final double getBestFitness() {
     return optimalValue;
   }
-
-  public void printStartInfo() {
-    System.out.println("GENETIC ALGORITHM\n");
-    System.out.println("Population size: " + numPop);
-    System.out.println("Max number generations: " + maxIter);
-    System.out.println("Strategy: Random");
-    System.out.println("1-point cross-over: Yes");
-    System.out.println("Cross-over rate: " + crossoverRate * 100 + "%");
-    System.out.println("Mutation rate: " + mutationRate * 100 + "%");
-    System.out.println("\nRESULTS:\n");
-  }
-
-  public void printResult() {
-    System.out.println("\nProcessing complete.\n");
-    System.out.println("\n****************************************************");
-    System.out.println();
-    System.out.println("Optimal fitness value: " + overallBestFitness);
-    System.out.print("Optimal route: ");
-    for (int i = 0; i < numCities; ++i) {
-      System.out.print(overallBestRoute.get(i).getName());
-      if (i < numCities - 1) {
-        System.out.print("->");
-      }
-    }
-  }
-}
 
 }

@@ -20,7 +20,6 @@ class Route {
 
   public double calculateFitness() {
     return sumDistance(chromosome);
-
   }
 
   private double sumDistance(ArrayList<City> path) {
@@ -57,4 +56,5 @@ class Route {
   public void setChromosome(ArrayList<City> chromosome) {
     this.chromosome = chromosome;
   }
+  
 }
