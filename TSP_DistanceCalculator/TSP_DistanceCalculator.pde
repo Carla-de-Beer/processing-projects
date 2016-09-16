@@ -1,8 +1,12 @@
 // Carla de Beer
 // September 2016
+// Genetic algorithm to find an optimised solution to the Travelling Salesman Problem.
+// The sketch dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities.
+// The actual physical distance on the route, calculated as the Haversine distance, is also shown.
+// Specifiable parameters: mutation rate, popuation size, max. no. iterations, no. of cities to be read.
 // Based on Daniel Shiffman's TSP GA solution from the Coding Rainbow coding challenges series:
 // https://www.youtube.com/watch?v=r_SpBy9fQuo
-// Haversine formula: 
+// Haversine distance formula: 
 // http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 // City coordinate data: https://gist.github.com/Miserlou/c5cd8364bf9b2420bb29
 
