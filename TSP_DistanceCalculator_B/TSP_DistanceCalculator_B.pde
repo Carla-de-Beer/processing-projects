@@ -41,6 +41,9 @@ ArrayList<Route> populationList = new ArrayList<Route>();
 color pink = color(255, 0, 120);
 color white = color(250);
 
+double record = 0.0;
+int res = 0;
+
 void setup() {
   size(700, 800);
   frameRate(60);
@@ -66,6 +69,12 @@ void draw() {
     randomStrategy.calculateBestEver();
     randomStrategy.generatePopulation();
     iter++;
+
+    if (Math.abs(record - randomStrategy.getBestFitness()) > 0.00001) {
+      res = iter;
+    }
+
+    record = randomStrategy.getBestFitness();
 
     beginShape();
     noFill();
@@ -117,7 +126,7 @@ void draw() {
 
     String haversineDistance = convertToCommaString((float)sumHaversine);
     printText(haversineDistance);
-    System.out.println(sumHaversine);
+    //System.out.println(sumHaversine);
     sumHaversine = 0.0;
   }
 }
@@ -213,4 +222,5 @@ void printText(String haversineDistance) {
   text("Mutation rate: " + mutationRate + "%", 45, height - 75);
   text("Elitism generation gap: " + randomStrategy.numElite + " individuals", 45, height - 55);
   text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", 45, height - 35);
+  text("Convergence at iteration: " + res, 500, height - 35);
 }
