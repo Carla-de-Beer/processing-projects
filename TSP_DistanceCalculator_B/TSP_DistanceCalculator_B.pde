@@ -10,11 +10,6 @@
 // Haversine distance formula: 
 // http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-
 BufferedReader reader;
 float maxLat, maxLon, minLat, minLon;
 ArrayList<Float> latList = new ArrayList();
@@ -24,8 +19,8 @@ ArrayList<Float> tmpLat = new ArrayList();
 ArrayList<Float> tmpLon = new ArrayList();
 
 int NUM_CITIES = 35;
-int iter = 0;
-int maxIter = 500;
+int generation = 0;
+int maxGeneration = 250;
 int numPop = 2000;
 double crossoverRate = 85.0;
 double mutationRate = 25.0;
@@ -42,7 +37,7 @@ color pink = color(255, 0, 120);
 color white = color(250);
 
 double record = 0.0;
-int res = 0;
+int converge = 0;
 
 void setup() {
   size(700, 800);
@@ -53,7 +48,7 @@ void setup() {
 void draw() {
 
   background(0);
-  if (iter >= maxIter - 1) {
+  if (generation >= maxGeneration - 1) {
     noLoop();
   }
 
@@ -68,10 +63,10 @@ void draw() {
     randomStrategy.calculateOptimal();
     randomStrategy.calculateBestEver();
     randomStrategy.generatePopulation();
-    iter++;
+    generation++;
 
     if (Math.abs(record - randomStrategy.getBestFitness()) > 0.00001) {
-      res = iter;
+      converge = generation;
     }
 
     record = randomStrategy.getBestFitness();
@@ -167,7 +162,7 @@ void init() {
   for (int i = 0; i < numPop; ++i) {
     populationList.add(new Route(path, true));
   }
-  randomStrategy = new RandomStrategy(populationList, numPop, maxIter, crossoverRate, mutationRate, generationGap, NUM_CITIES);
+  randomStrategy = new RandomStrategy(populationList, numPop, maxGeneration, crossoverRate, mutationRate, generationGap, NUM_CITIES);
 }
 
 void parse(BufferedReader reader, ArrayList<Float> list1, ArrayList<Float> list2, ArrayList<String> list3) {
@@ -216,11 +211,11 @@ String convertToCommaString(int value) {
 void printText(String haversineDistance) {
   fill(white, 200);
   text("Travelling to the " + NUM_CITIES + " largest cities in the US ", 45, height - 135);
-  text("Iterations: " + convertToCommaString(iter), 45, height - 115);
+  text("Generations: " + convertToCommaString(generation), 45, height - 115);
   text("Population size: " + convertToCommaString(numPop) + " individuals", 45, height - 95);
   text("Crossover rate: " +crossoverRate + "%", 45, height - 75);
   text("|  Mutation rate: " + mutationRate + "%", 179, height - 75);
   text("Elitism generation gap: " + randomStrategy.numElite + " individuals", 45, height - 55);
   text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", 45, height - 35);
-  text("|  Convergence at iteration: " + res, 400, height - 35);
+  text("|  Convergence at generation: " + converge, 400, height - 35);
 }

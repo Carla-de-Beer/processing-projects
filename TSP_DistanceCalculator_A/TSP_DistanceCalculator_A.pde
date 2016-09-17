@@ -190,7 +190,7 @@ String convertToCommaString(double fitness) {
 void printText(float fitness, String haversineDistance) {
   fill(white, 200);
   text("Travelling to the " + NUM_CITIES + " largest cities in the US ", 45, height - 135);
-  text("Iterations: " + population.generations, 45, height - 115);
+  text("Generations: " + population.generations, 45, height - 115);
   text("Population size: " + maxPop + " individuals", 45, height - 95);
   text("MutationRate: " + floor(mutationRate * 100) + "%", 45, height - 75);
   text("Current best fitness: " + fitness, 45, height - 55);
