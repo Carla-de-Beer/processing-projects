@@ -3,6 +3,8 @@
 // Minimum Spanning Tree (Prim's Algorithm) connecting the 35 larget cities in the US.
 // Based on Daniel Shiffman's Minimum Spanning Tree solution from the Coding Rainbow coding challenges series:
 // https://www.youtube.com/watch?v=BxabnKrOjT0
+// Haversine distance formula: 
+// http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
 import java.util.*;
 
@@ -15,7 +17,9 @@ ArrayList<Float> tmpLat = new ArrayList<Float>();
 ArrayList<Float> tmpLon = new ArrayList<Float>();
 
 ArrayList<City> path = new ArrayList<City>();
-int NUM_CITIES = 35;
+ArrayList<City> pathTrue = new ArrayList<City>();
+int NUM_CITIES = 36;
+float haversineDistance = 0.0;
 
 color pink = color(255, 0, 120);
 color white = color(250);
@@ -26,20 +30,26 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-
-  if (frameCount < NUM_CITIES + 10) {
+  if (frameCount < NUM_CITIES ) {
+    background(0);
     textSize(20);
     path.clear();
-    init();
-  } else if (frameCount >= NUM_CITIES + 10) {
+    pathTrue.clear();
+    init(); // The BufferedReader has to be executed within the draw() loop
+  } else if (frameCount >= NUM_CITIES && frameCount <= NUM_CITIES + 1) {
     textSize(12);
+    background(0);
 
     ArrayList<City> reached = new ArrayList<City>();
-    ArrayList<City> unreached= new ArrayList<City>(path);
+    ArrayList<City> unreached = new ArrayList<City>(path);
+    ArrayList<City> reachedTrue = new ArrayList<City>();
+    ArrayList<City> unreachedTrue = new ArrayList<City>(pathTrue);
 
     reached.add(unreached.get(0));
     unreached.remove(0);
+
+    reachedTrue.add(unreachedTrue.get(0));
+    unreachedTrue.remove(0);
 
     while (unreached.size() > 0) {
       double record = Double.POSITIVE_INFINITY;
@@ -57,37 +67,55 @@ void draw() {
       }
 
       line(reached.get(rIndex).lat, reached.get(rIndex).lon, unreached.get(uIndex).lat, unreached.get(uIndex).lon);
+      if (frameCount < NUM_CITIES + 1) {
+        haversineDistance += haversine(reachedTrue.get(rIndex).lat, unreachedTrue.get(uIndex).lat, reachedTrue.get(rIndex).lon, unreachedTrue.get(uIndex).lon);
+        println(haversineDistance);
+      }
+
       reached.add(unreached.get(uIndex));
       unreached.remove(uIndex);
+
+      reachedTrue.add(unreachedTrue.get(uIndex));
+      unreachedTrue.remove(uIndex);
     }
 
     fill(white);
+    noStroke();
     for (int i = 0; i < path.size(); ++i) {
       ellipse(path.get(i).lat, path.get(i).lon, 8, 8);
     }
 
-    stroke(255);
     strokeWeight(2);
     stroke(pink);
 
     for (City c : path) {
-      ellipse((float)c.lat, (float)c.lon, 8, 8);
+      ellipse(c.lat, c.lon, 8, 8);
       if (c.name.equals("Washington") || c.name.equals("Seattle") || 
         c.name.equals("Indianapolis") || c.name.equals("Oklahoma City") || 
         c.name.equals("Portland") || c.name.equals("Milwaukee") ||
         c.name.equals("San Antonio")) {
-        text(c.name, (float)c.lat + 8, (float)c.lon + 15);
+        text(c.name, c.lat + 8, c.lon + 15);
       } else if (c.name.equals("San Francisco")) {
-        text(c.name, (float)c.lat + 8, (float)c.lon + 17);
+        text(c.name, c.lat + 8, c.lon + 17);
       } else if (c.name.equals("Dallas") || c.name.equals("Sacramento") ||
         c.name.equals("New York") || c.name.equals("Philadelphia") ||
         c.name.equals("Baltimore") ) {
-        text(c.name, (float)c.lat + 8, (float)c.lon - 5);
-      } else text(c.name, (float)c.lat + 11, (float)c.lon + 4);
+        text(c.name, c.lat + 8, c.lon - 5);
+      } else text(c.name, c.lat + 11, c.lon + 4);
     }
 
-    printText();
+    printText(haversineDistance);
+  } else if (frameCount == NUM_CITIES + 2) {
+    println("DONE");
+    noLoop();
   }
+}
+
+double haversine(double lat1, double lat2, double lon1, double lon2) {
+  double p = 0.017453292519943295;
+  double a = 0.5 - Math.cos((lat2 - lat1) * p) / 2
+    + Math.cos(lat1 * p) * Math.cos(lat2 * p) * (1 - Math.cos((lon2 - lon1) * p)) / 2;
+  return 12742 * Math.asin(Math.sqrt(a));
 }
 
 void init() {
@@ -112,6 +140,7 @@ void init() {
     float xx = map(latList.get(i), minLat, maxLat, 50, width - 100);
     float yy = map(lonList.get(i), minLon, maxLon, 45, height - 192);
     path.add(new City(xx, yy, nameList.get(i)));
+    pathTrue.add(new City(latList.get(i), lonList.get(i), nameList.get(i)));
   }
 }
 
@@ -133,7 +162,8 @@ void parse(BufferedReader reader, ArrayList<Float> list1, ArrayList<Float> list2
   }
 } 
 
-void printText() {
+void printText(float haversineDistance) {
   fill(white, 200);
-  text("Connecting the " + NUM_CITIES + " largest cities in the US ", 45, height - 35);
+  text("Connecting the " + Integer.toString(NUM_CITIES - 1) + " largest cities in the US ", 45, height - 55);
+  text("The total distance of the conection: " + haversineDistance + " km (Haversine distance)", 45, height - 35);
 }
