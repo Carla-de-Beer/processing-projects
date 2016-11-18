@@ -4,6 +4,9 @@
 import java.util.*;
 import java.text.*;
 
+Date dNow;
+SimpleDateFormat ft;
+
 float r = 0.0;
 float g = 0.0;
 float b = 0.0;
@@ -29,8 +32,10 @@ void draw() {
   fill(textR, textG, textB);
   text(args[0], width/2 - 30, height/2 + 25);
   if (frameCount == 20) {
-    Date dNow = new Date();
-    SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    dNow = new Date();
+    ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    textSize(15);
+    text(ft.format(dNow), 50, height - 50);
     saveFrame("images/" + ft.format(dNow) + ".png");
     exit();
   }
