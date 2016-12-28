@@ -18,9 +18,9 @@ ArrayList<Float> tmpLon = new ArrayList<Float>();
 
 ArrayList<City> path = new ArrayList<City>();
 ArrayList<City> pathTrue = new ArrayList<City>();
+
 int NUM_CITIES = 36;
 float haversineDistance = 0.0;
-
 color pink = color(255, 0, 120);
 color white = color(250);
 
@@ -36,7 +36,8 @@ void draw() {
     textSize(20);
     path.clear();
     pathTrue.clear();
-    init(); // The BufferedReader has to be executed within the draw() loop
+    // The BufferedReader has to be executed within the draw() loop
+    init();
   } else if (frameCount >= NUM_CITIES && frameCount <= NUM_CITIES + 1) {
     textSize(12);
     background(0);
@@ -165,6 +166,6 @@ void parse(BufferedReader reader, ArrayList<Float> list1, ArrayList<Float> list2
 
 void printText(float haversineDistance) {
   fill(white, 200);
-  text("Connecting the " + Integer.toString(NUM_CITIES - 1) + " largest cities in the US ", 45, height - 55);
+  text("Connecting the " + Integer.toString(NUM_CITIES) + " largest cities in the US ", 45, height - 55);
   text("The total distance of the conection: " + haversineDistance + " km (Haversine distance)", 45, height - 35);
 }
