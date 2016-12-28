@@ -24,25 +24,20 @@ boolean reverse = true;
 boolean showLines = true;
 
 
-void setup()
-{
+void setup() {
   size(900, 900, OPENGL);
+  pixelDensity(displayDensity());
   smooth();
   particles = new Particle [u_row][v_row];
   finalPos = new PVector [u_row][v_row];
 
-  for (int i = 0; i < u_row; i++) 
-  {
-    for (int j = 0; j < v_row; j++) 
-    {
+  for (int i = 0; i < u_row; i++) {
+    for (int j = 0; j < v_row; j++) {
       PVector loc = new PVector (random(width-(width - (u_row-1)*mult)), random(height-(height - (u_row-1)*mult)));
-      if (!reverse)
-      {
+      if (!reverse) {
         particles[i][j] = new Particle(loc);
         finalPos[i][j] = new PVector(i*mult, j*mult);
-      }
-      else
-      {
+      } else {
         PVector loc1 = new PVector(i*mult, j*mult);
         particles[i][j] = new Particle(loc1);
         finalPos[i][j] = new PVector(random(width-(width - (u_row-1)*mult)), random(height-(height - (u_row-1)*mult)));
@@ -52,10 +47,8 @@ void setup()
   }
 }
 
-void draw()
-{    
-  if (record)
-  {
+void draw() {    
+  if (record) {
     beginRecord(PDF, "frame-####.pdf");
   }
 
@@ -64,10 +57,8 @@ void draw()
   noStroke();
   translate((width - (u_row-1)*mult)/2, (height - (v_row-1)*mult)/2);
 
-  for (int j = 0; j < v_row-2; j++)
-  {
-    for (int i=(j%2)*2; i < u_row-3;  i+=4) 
-    {  
+  for (int j = 0; j < v_row-2; j++) {
+    for (int i=(j%2)*2; i < u_row-3; i+=4) {  
       beginShape();
       if (j % 3 == i % 1 ) fill(100, 180);
       else fill(90, 180);
@@ -81,10 +72,8 @@ void draw()
     }
   }
 
-  for (int i = 0; i < u_row; i++)
-  {
-    for (int j = 0; j < v_row; j++) 
-    { 
+  for (int i = 0; i < u_row; i++) {
+    for (int j = 0; j < v_row; j++) { 
       particles[i][j].arrive(finalPos[i][j]);
       particles[i][j].run();
     }
@@ -93,55 +82,42 @@ void draw()
   stroke(255);
   strokeWeight(1);
 
-  for (int j = 0; j < v_row-2; j++)
-  {
-    for (int i=(j%2)*2; i < u_row-3;  i+=4) 
-    {               
-      if (showLines)
-      {
+  for (int j = 0; j < v_row-2; j++) {
+    for (int i=(j%2)*2; i < u_row-3; i+=4) {               
+      if (showLines) {
         particles[i][j].drawLines(particles, i, j);
       }
     }
   }
-  if (showLines)
-  {
-    for (int j = 2; j < v_row-2; j+=2) 
-    {   
+  if (showLines) {
+    for (int j = 2; j < v_row-2; j+=2) {   
       line(particles[0][j+1].pos.x, particles[0][j+1].pos.y, particles[1][j].pos.x, particles[1][j].pos.y);
     } 
 
-    for (int j = 2; j < v_row; j+=2) 
-    {   
+    for (int j = 2; j < v_row; j+=2) {   
       line(particles[24][(j-1)].pos.x, particles[24][(j-1)].pos.y, particles[25][j].pos.x, particles[25][j].pos.y);
     } 
 
-    for (int i = 0; i < u_row; i+=4) 
-    {   
+    for (int i = 0; i < u_row; i+=4) {   
       line(particles[i][1].pos.x, particles[i][1].pos.y, particles[i+1][0].pos.x, particles[i+1][0].pos.y);
     } 
 
-    for (int i = 2; i < u_row; i+=4) 
-    {   
+    for (int i = 2; i < u_row; i+=4) {   
       line(particles[i][0].pos.x, particles[(i)][0].pos.y, particles[(i+1)][1].pos.x, particles[i+1][1].pos.y);
     } 
 
-    for (int i = 1; i < u_row-1; i+=4) 
-    {   
+    for (int i = 1; i < u_row-1; i+=4) {   
       line(particles[i][24].pos.x, particles[i][24].pos.y, particles[i+1][24].pos.x, particles[i+1][24].pos.y);
     } 
 
-    for (int i = 3; i < u_row-1; i+=4) 
-    {   
+    for (int i = 3; i < u_row-1; i+=4) {   
       line(particles[i][23].pos.x, particles[i][23].pos.y, particles[i+1][23].pos.x, particles[i+1][23].pos.y);
     }
   }
 
-  for (int j = 0; j < v_row-2; j++)
-  {
-    for (int i=(j%2)*2; i < u_row-3;  i+=4) 
-    {               
-      if (showParticles)
-      {
+  for (int j = 0; j < v_row-2; j++) {
+    for (int i=(j%2)*2; i < u_row-3; i+=4) {               
+      if (showParticles) {
         particles[i][j].drawParticle(particles, i, j);
       }
     }
@@ -149,23 +125,19 @@ void draw()
 
   popMatrix();
 
-  if (record)
-  {
+  if (record) {
     endRecord();
     record = false;
   }
 }
 
 
-void keyReleased()
-{
-  if (key == 'R' || key =='r') // toggle re-start
-  {
+void keyReleased() {
+  if (key == 'R' || key =='r') {// toggle re-start
     setup();
     draw();
   }
-  if (key == 'U' || key =='u') // toggle start in reverse
-  {
+  if (key == 'U' || key =='u') {// toggle start in reverse
     reverse = true;
     setup();
     draw();
@@ -176,4 +148,3 @@ void keyReleased()
   if (key == 'D' || key =='d') showParticles = !showParticles; // toggle show lines
   if (key == 'p' || key == 'P')  record=true; // save PDF
 }
-

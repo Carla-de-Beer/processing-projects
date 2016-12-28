@@ -36,7 +36,6 @@ class Cell {
   }
 
   void display() {
-
     stroke(170);
     //noStroke();
     pushMatrix();
@@ -53,4 +52,3 @@ class Cell {
     popMatrix();
   }
 }
-

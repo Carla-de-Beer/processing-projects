@@ -33,59 +33,44 @@ class Cell {
   }
 
   void display() {
-    if (previous == 0 && state == 1)
-    {
+    if (previous == 0 && state == 1) {
       if (colorOn)
         fill(0, 255, 0);
       else fill((1.8*h)%255);
-      if (h < cap)
-      {
+      if (h < cap) {
         h += check;
         z -= check/2;
-      }
-
-      else if (h >= cap)     
-      {
+      } else if (h >= cap) {
         h = cap;
         z = -20;
       }
-    }
-    else if (state == 1) {
+    } else if (state == 1) {
       if (colorOn)
         fill( 255, 0, 0);
       else fill((1.8*h)%255);
 
-      if (h < cap)
-      {
+      if (h < cap) {
         h += check;
         z -= check/2;
-      }
-
-      else if (h >= cap)     
-      {
+      } else if (h >= cap) {
         h = cap;
         z = -20;
       }
-    }
-    else if (previous == 1 && state == 0) {
+    } else if (previous == 1 && state == 0) {
 
       if (colorOn)
         fill(#F5EA16);
       else fill((1.8*h)%255);
 
-      if (h < cap)
-      {
+      if (h < cap) {
         h += check;
         z -= check/2;
-      }
-
-      else if (h >= cap)     
-      {
+      } else if (h >= cap) {
         h = cap;
         z = -20;
       }
-    }
-    else fill((1.8*h)%255);
+    } else fill((1.8*h)%255);
+    
     stroke(10);
     strokeWeight(0.5);
     pushMatrix();
@@ -94,4 +79,3 @@ class Cell {
     popMatrix();
   }
 }
-

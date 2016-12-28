@@ -9,6 +9,7 @@ int c = 7;
 
 void setup() {
   size(650, 650);
+  pixelDensity(displayDensity());
   background(51);
   //colorMode(HSB);
   colorMode(RGB);

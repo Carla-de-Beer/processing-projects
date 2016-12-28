@@ -21,11 +21,12 @@ int start1, start2;
 
 void setup() {
   size(1000, 800, P3D);
+  pixelDensity(displayDensity());
   cam = new PeasyCam(this, 700);
   //cam.lookAt((double) width/2, (double) width/2, (double) width/2);
   //cam.lookAt((double) width/2, (double) width/2, (double) width/2, 500.00);
   cp5 = new ControlP5(this);
-  
+
   globe = new PVector[total+1][total+1];
 
   //colorMode(HSB);

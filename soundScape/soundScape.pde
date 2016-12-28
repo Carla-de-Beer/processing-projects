@@ -18,7 +18,8 @@ PFont font;
 float theta = 0.0;
 
 void setup() {
-  size(1000, 870, OPENGL);
+  size(1000, 870, P3D);
+  pixelDensity(displayDensity());
   minim = new Minim(this);
 
   player = minim.loadFile("marcus_kellis_theme.mp3");
@@ -155,4 +156,3 @@ void draw() {
   land.calculate();
   theta += 0.0025;
 }
-

@@ -16,6 +16,7 @@ float textB = 0.0;
 
 void setup() {
   size(600, 400);
+  pixelDensity(displayDensity());
 
   r = random(255);
   g = random(255);

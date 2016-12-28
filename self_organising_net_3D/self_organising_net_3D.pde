@@ -3,7 +3,6 @@
 // Self-organising net structure: 3D
 // Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code)
 
-import peasy.test.*;
 import peasy.org.apache.commons.math.*;
 import peasy.*;
 import peasy.org.apache.commons.math.geometry.*;
@@ -38,10 +37,10 @@ PFont myFont1;
 float accAve = 0;
 float velAve = 0;
 
-void setup()
-{
+void setup() {
   randomSeed(11);
   size(900, 900, OPENGL);
+  pixelDensity(displayDensity());
   smooth();
 
   showParticles = true;
@@ -59,25 +58,18 @@ void setup()
 
   importTextData();
 
-  for (int i=0; i<num; ++i) 
-  {
-    for (int j=0; j<num; ++j) 
-    {
+  for (int i=0; i<num; ++i) {
+    for (int j=0; j<num; ++j) {
       vecMesh[i][j] = new PVector(random(-1*width/3, width/3)*3, random(-1*height/3, height/3)*3, random(-1*width/3, width/3)*3);
     }
   }
 
-  for (int i = 0; i < num; i++) 
-  {
-    for (int j = 0; j < num; j++) 
-    {
+  for (int i = 0; i < num; i++) {
+    for (int j = 0; j < num; j++) {
       PVector loc = new PVector (random(width-(width - (num-1)*mult*2)), random(height-(height - (num-1)*mult*2)), random(width-(width - (num-1)*mult*2)));
-      if (!reverse)
-      {
+      if (!reverse) {
         particles[i][j] = new Particle(loc);
-      }
-      else
-      {
+      } else {
         PVector loc1 = new PVector(vecMesh[i][j].x, vecMesh[i][j].y, vecMesh[i][j].z);
         particles[i][j] = new Particle(loc1);
         vecMesh[i][j] = new PVector(random(width-(width - (num-1)*mult)), random(height-(height - (num-1)*mult)));
@@ -90,10 +82,8 @@ void setup()
 }
 
 
-void draw()
-{      
-  if (record == true) 
-  {
+void draw() {      
+  if (record == true) {
     beginRaw(DXF, "output.dxf"); // Start recording to the file
   }
 
@@ -107,30 +97,24 @@ void draw()
   //println("vecMesh[0][0].x = " + vecMesh[0][0].x);
   println("particles[0][0].pos.x = " + particles[0][0].pos.x);
 
-  for (int i = 0; i < num; i++)
-  {
-    for (int j = 0; j < num; j++) 
-    { 
+  for (int i = 0; i < num; i++) {
+    for (int j = 0; j < num; j++) { 
       particles[i][j].arrive(vecMesh[i][j]);
       particles[i][j].run();
     }
   }
 
   noStroke();
-  for (int i = 0; i < num; ++i) 
-  {
-    for (int j = 0; j < num; ++j) 
-    {
-      if ((int)particles[i][j].pos.x == (int)vecMesh[i][j].x && (int)particles[i][j].pos.y == (int)vecMesh[i][j].y && (int)particles[i][j].pos.z==(int)vecMesh[i][j].z)
-      {
+  for (int i = 0; i < num; ++i) {
+    for (int j = 0; j < num; ++j) {
+      if ((int)particles[i][j].pos.x == (int)vecMesh[i][j].x && 
+        (int)particles[i][j].pos.y == (int)vecMesh[i][j].y && (int)particles[i][j].pos.z==(int)vecMesh[i][j].z) {
         fill(#F52411, 150);
         pushMatrix();
         translate(vecMesh[i][j].x, vecMesh[i][j].y, vecMesh[i][j].z);
         box(12);
         popMatrix();
-      }
-      else 
-      {
+      } else {
         fill(50, 150);
         pushMatrix();
         translate(vecMesh[i][j].x, vecMesh[i][j].y, vecMesh[i][j].z);
@@ -145,26 +129,20 @@ void draw()
   stroke(255);
   strokeWeight(1);
 
-  for (int i = 0; i < num; i++)
-  {
-    for (int j = 0; j < num; j++) 
-    {        
-      if (showParticles)
-      {
-        if ((int)particles[i][j].pos.x == (int)vecMesh[i][j].x && (int)particles[i][j].pos.y == (int)vecMesh[i][j].y && (int)particles[i][j].pos.z==(int)vecMesh[i][j].z)
-        {
+  for (int i = 0; i < num; i++) {
+    for (int j = 0; j < num; j++) {        
+      if (showParticles) {
+        if ((int)particles[i][j].pos.x == (int)vecMesh[i][j].x 
+          && (int)particles[i][j].pos.y == (int)vecMesh[i][j].y && (int)particles[i][j].pos.z==(int)vecMesh[i][j].z) {
           colorOff = true;
-        }
-        else colorOff = false;
+        } else colorOff = false;
         particles[i][j].drawParticle(i, j, colorOff);
       }
     }
   }
 
-  for (int i = 0; i < num-1; ++i) 
-  {
-    for (int j = 0; j < num-1; ++j) 
-    {
+  for (int i = 0; i < num-1; ++i) {
+    for (int j = 0; j < num-1; ++j) {
       fill(150, 100);
       stroke(100, 100);
       beginShape(TRIANGLE_STRIP);
@@ -188,8 +166,7 @@ void draw()
   camera.endHUD();
   popMatrix();
 
-  if (record == true) 
-  {
+  if (record == true) {
     endRaw();
     record = false; // Stop recording to the file
   }
@@ -197,15 +174,13 @@ void draw()
   //saveFrame("image-#####.tif");
 }
 
-void importTextData() 
-{   
+void importTextData() {   
   String[] data = loadStrings("pointCloud.txt"); 
   String everything = join(data, " ");
   String delimeters = "{,,} ";
   //float minVal = min(everything);
 
-  for (int i = 0; i < data.length*3; i +=3) 
-  {
+  for (int i = 0; i < data.length*3; i +=3) {
     values = splitTokens(everything, delimeters);
     // println( values);
     float xx = float(values[i]);                     // cast string value to a float values
@@ -227,15 +202,12 @@ void importTextData()
   }
 }
 
-void keyReleased()
-{
-  if (key == 'R' || key =='r') 
-  {
+void keyReleased() {
+  if (key == 'R' || key =='r') {
     setup();
     draw();
   }
-  if (key == 'U' || key =='u') 
-  {
+  if (key == 'U' || key =='u') {
     reverse = true;
     setup();
     draw();
@@ -245,4 +217,3 @@ void keyReleased()
   if (key == 'D' || key =='d') showParticles = !showParticles; // toggle dots
   if (key == 'X' || key == 'x') record = true;
 }
-

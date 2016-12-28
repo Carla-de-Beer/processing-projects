@@ -26,6 +26,7 @@ color white = color(250);
 
 void setup() {
   size(700, 800);
+  pixelDensity(displayDensity());
   reader = createReader("cities.txt");
 }
 

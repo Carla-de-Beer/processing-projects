@@ -11,7 +11,6 @@ PVector eye;
 PVector center;
 PVector up;
 
-import peasy.test.*;
 import processing.opengl.*;
 
 GOL gol;
@@ -21,7 +20,8 @@ import processing.dxf.*;
 //boolean record = false;
 
 void setup() {
-  size(650, 650, OPENGL);
+  size(650, 650, P3D);
+  pixelDensity(displayDensity());
   gol = new GOL();
 
   eye = new PVector(width/6, (height/6)*5, -width/1.15);
@@ -69,8 +69,6 @@ void keyPressed() {
   //if (key == 'R' || key == 'r') record = true;
 }
 
-void mouseReleased()
-{
+void mouseReleased() {
   noPause = !noPause;
 }
-

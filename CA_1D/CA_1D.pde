@@ -13,9 +13,9 @@ int num = 90;
 int n = num;
 int jVal = (int)(num*2-(num)+3);
 
-void setup()
-{
+void setup() {
   background(255);
+  pixelDensity(displayDensity());
   size(910, 825);
 
   cell = new Cell[width][height];
@@ -27,8 +27,7 @@ void setup()
   }
 }
 
-void draw()
-{
+void draw() {
   strokeWeight(0.5);
   pushMatrix();
   translate(0, width/n *sin(radians(60)));
@@ -53,7 +52,7 @@ void draw()
       int val = 0;
       //println("i = " + i);
       //println("j = " + j);
-      
+
       if (cell[(i-1 + num) % num][(j-1 + jVal) % jVal].value == true) {
         val+=16; // 2 to power of 4 = 16
       }
@@ -73,8 +72,6 @@ void draw()
   popMatrix();
 }
 
-void keyReleased()
-{
+void keyReleased() {
   saveFrame();
 }
-

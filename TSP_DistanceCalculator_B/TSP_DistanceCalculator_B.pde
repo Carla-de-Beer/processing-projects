@@ -41,6 +41,7 @@ int converge = 0;
 
 void setup() {
   size(700, 800);
+  pixelDensity(displayDensity());
   frameRate(60);
   reader = createReader("cities.txt");
 }

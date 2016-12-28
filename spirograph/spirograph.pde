@@ -10,6 +10,7 @@ public static final int STOP = 90;
 
 void setup() {
   size(650, 650);
+  pixelDensity(displayDensity());
   background(255);
   smooth();
 }

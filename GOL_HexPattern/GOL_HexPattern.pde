@@ -12,6 +12,7 @@ GOL gol;
 
 void setup() {
   size(815, 841);
+  pixelDensity(displayDensity());
   smooth();
   gol = new GOL();
 }
@@ -27,8 +28,6 @@ void mousePressed() {
   gol.init();
 }
 
-void keyReleased()
-{
+void keyReleased() {
   if (key == 'S' || key == 's') saveFrame();
 }
-

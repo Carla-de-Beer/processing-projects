@@ -11,6 +11,7 @@ PVector pos;
 
 void setup() {
   size(780, 780);
+  pixelDensity(displayDensity());
   background(255);
   smooth();
   pos = new PVector(50, 50, 0);
@@ -38,4 +39,3 @@ void keyReleased() {
   if (key == 'R' || key == 'r') setup();
   if (key == 'S' || key == 's') saveFrame();
 }
-

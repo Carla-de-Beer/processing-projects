@@ -36,6 +36,7 @@ color white = color(250);
 
 void setup() {
   size(700, 800);
+  pixelDensity(displayDensity());
   maxPop = 2500;
   mutationRate = 0.15;
   reader = createReader("cities.txt");
@@ -124,7 +125,7 @@ void draw() {
 void init() {
   fill(white);
   text("Parsing the city data", 250, 350);
-  
+
   // Load the city data 
   parse(reader, latList, lonList, nameList);
 
