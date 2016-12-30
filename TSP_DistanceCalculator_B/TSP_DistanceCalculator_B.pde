@@ -90,14 +90,30 @@ void draw() {
       if (c.name.equals("Washington") || c.name.equals("Seattle") || 
         c.name.equals("Indianapolis") || c.name.equals("Oklahoma City") || 
         c.name.equals("Portland") || c.name.equals("Milwaukee") ||
-        c.name.equals("San Antonio")) {
+        c.name.equals("San Antonio") || c.name.equals("Long Beach") ||
+        c.name.equals("Mesa")) { 
         text(c.name, (float)c.lat + 8, (float)c.lon + 15);
       } else if (c.name.equals("San Francisco")) {
-        text(c.name, (float)c.lat + 8, (float)c.lon + 17);
-      } else if (c.name.equals("Dallas") || c.name.equals("Sacramento") ||
-        c.name.equals("New York") || c.name.equals("Philadelphia") ||
-        c.name.equals("Baltimore") ) {
+        text(c.name, (float)c.lat + 5, (float)c.lon + 19);
+      } else if (c.name.equals("Sacramento") ||
+        c.name.equals("New York") || c.name.equals("Philadelphia") ) {
         text(c.name, (float)c.lat + 8, (float)c.lon - 5);
+      } else if (c.name.equals("Baltimore") ) {
+        text(c.name, (float)c.lat + 5, (float)c.lon - 10);
+      } else if (c.name.equals("Dallas")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon - 8);
+      } else if (c.name.equals("Arlington")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon - 3);
+      } else if (c.name.equals("Oakland")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon + 8);
+      } else if (c.name.equals("Denver")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon + 10);
+      } else if (c.name.equals("Albuquerque")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon + 10);
+      } else if (c.name.equals("Fort Worth")) {
+        text(c.name, (float)c.lat + 10, (float)c.lon - 3);
+      } else if (c.name.equals("Wichita")) {
+        text(c.name, (float)c.lat + 8, (float)c.lon + 10);
       } else text(c.name, (float)c.lat + 11, (float)c.lon + 4);
     }
 

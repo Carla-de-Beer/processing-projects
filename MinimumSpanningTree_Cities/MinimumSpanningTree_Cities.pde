@@ -19,7 +19,7 @@ ArrayList<Float> tmpLon = new ArrayList<Float>();
 ArrayList<City> path = new ArrayList<City>();
 ArrayList<City> pathTrue = new ArrayList<City>();
 
-int NUM_CITIES = 36;
+int NUM_CITIES = 35;
 float haversineDistance = 0.0;
 color pink = color(255, 0, 120);
 color white = color(250);
@@ -38,7 +38,7 @@ void draw() {
     pathTrue.clear();
     // The BufferedReader has to be executed within the draw() loop
     init();
-  } else if (frameCount >= NUM_CITIES && frameCount <= NUM_CITIES + 1) {
+  } else if (frameCount >= NUM_CITIES + 1 && frameCount <= NUM_CITIES + 2) {
     textSize(12);
     background(0);
 
