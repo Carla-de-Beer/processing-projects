@@ -18,7 +18,7 @@ SimpleDateFormat ft;
 
 void setup() {
   size(816, 544);
-  pixelDensity(1);
+  pixelDensity(2);
   circles = new ArrayList<Circle>();
   img = loadImage("face.jpg");
 }
