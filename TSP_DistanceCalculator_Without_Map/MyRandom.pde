@@ -1,11 +1,8 @@
-// Used for testing the code with POJO Java, where the Processing random() method has no meaning.
-
 import java.util.Random;
 
-public class MyRandom {
+class MyRandom {
 
   public MyRandom() {
-
   }
 
   public int randomInt(int min, int max) {
@@ -25,5 +22,5 @@ public class MyRandom {
     double randomNum = 1 * rand.nextDouble();
     return randomNum;
   }
-
+  
 }
