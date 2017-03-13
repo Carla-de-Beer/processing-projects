@@ -9,6 +9,7 @@
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.9167&rep=rep1&type=pdf
 // Haversine distance formula: 
 // http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
+// Map from MapBox; https://www.mapbox.com/api-documentation/#retrieve-a-sprite-image-or-json
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -17,16 +18,16 @@ import java.text.*;
 import processing.pdf.*;
 
 BufferedReader reader;
-float maxLat, maxLon, minLat, minLon;
-ArrayList<Float> latList = new ArrayList();
+float minLon, maxLon, minLat, maxLat;
 ArrayList<Float> lonList = new ArrayList();
+ArrayList<Float> latList = new ArrayList();
 ArrayList<String> nameList = new ArrayList();
-ArrayList<Float> tmpLat = new ArrayList();
 ArrayList<Float> tmpLon = new ArrayList();
+ArrayList<Float> tmpLat = new ArrayList();
 
 int NUM_CITIES = 50;
 int generation = 0;
-int maxGeneration = 350;
+int maxGeneration = 351;
 int numPop = 5000;
 double crossoverRate = 85.0;
 double mutationRate = 25.0;
@@ -38,22 +39,19 @@ RandomStrategy randomStrategy;
 ArrayList<City> path = new ArrayList();
 ArrayList<City> pathTrue = new ArrayList();
 ArrayList<Route> populationList = new ArrayList<Route>();
+double record = 0.0;
+int converge = 0;
+String result;
 
-color red = color(242, 35, 50);
+color red = color(255, 64, 64);
 color white = color(250);
 color lightWhite = color(250, 200);
 color darkGray = color(80, 200);
+color mapGray = color(184);
 
 PFont fontHeaderBold;
 PFont fontBody, fontBodyBold;
-
-double record = 0.0;
-int converge = 0;
-boolean isRecord = false;
-String result;
-
-Date dNow;
-SimpleDateFormat ft;
+PFont mapBody;
 
 PImage img;
 int imageWidth = 1024;
@@ -65,17 +63,23 @@ float lat = 32.715738;
 float lon = -117.1610838;
 int zoom = 3;
 
+Date dNow;
+SimpleDateFormat ft;
+boolean isRecord = false;
+// Amend this as required
+String resultsFilePath = "/Users/cadebe/Documents/Processing/TSP_DistanceCalculator_With_Map/results.csv";
+
 void setup() {
   size(1024, 512);
+  pixelDensity(displayDensity());
   img = loadImage("map.jpg");
   imageMode(CENTER);
-  pixelDensity(displayDensity());
-  frameRate(60);
   reader = createReader("cities.txt");
-  background(255);
-  fontHeaderBold = createFont("Arial-BoldMT.vlw", 22);
+  fontHeaderBold = createFont("Arial-BoldMT", 20);
   fontBody = createFont("ArialMT", 12);
   fontBodyBold = createFont("Arial-BoldMT", 12);
+  mapBody = createFont("Helvetica-Bold", 11);
+  //println(PFont.list());
 }
 
 void draw() {
@@ -91,12 +95,13 @@ void draw() {
   }
 
   if (frameCount < NUM_CITIES + 10) {
+    background(255);
     textFont(fontHeaderBold);
     path.clear();
     pathTrue.clear();
     init();
   } else if (frameCount >= NUM_CITIES + 10) {
-    //background(img);
+
     translate(width/2, height/2);
     image(img, 0, 0, width, height);
 
@@ -117,7 +122,7 @@ void draw() {
     strokeWeight(2);
     for (City c : randomStrategy.getBestSolution()) {
       stroke(red, 200);
-      vertex((float)c.lat, (float)c.lon);
+      vertex((float)c.lon, (float)c.lat);
     }
     endShape();
 
@@ -125,7 +130,38 @@ void draw() {
 
     for (City c : path) {
       fill(lightWhite);
-      ellipse((float)c.lat, (float)c.lon, 8, 8);
+      ellipse((float)c.lon, (float)c.lat, 8, 8);
+
+      textFont(mapBody);
+      if (c.name.equals("Boston") || c.name.equals("New York") || 
+        c.name.equals("Washington") || c.name.equals("Virginia Beach") ||
+        c.name.equals("Charlotte") || c.name.equals("Jacksonville") ||
+        c.name.equals("Milwaukee") || c.name.equals("Kansas City") ||
+        c.name.equals("Detroit") || c.name.equals("Wichita") ||
+        c.name.equals("Tulsa") || c.name.equals("Memphis") ||
+        c.name.equals("Dallas") || c.name.equals("El Paso") || 
+        c.name.equals("Albuquerque") || c.name.equals("Las Vegas") || 
+        c.name.equals("Phoenix") || c.name.equals("Fresno") || 
+        c.name.equals("Omaha") || c.name.equals("Portland") || 
+        c.name.equals("Seattle")) { 
+        fill(lightWhite);
+        text(c.name, (float)c.lon + 9.5, (float)c.lat + 4.5);
+        text(c.name, (float)c.lon + 8.5, (float)c.lat + 3.5);
+        fill(mapGray);
+        text(c.name, (float)c.lon + 9, (float)c.lat + 4);
+      } else if ( c.name.equals("Minneapolis") || c.name.equals("San Antonio")) {
+        fill(lightWhite);
+        text(c.name, (float)c.lon - 73.5, (float)c.lat - 0.5);
+        text(c.name, (float)c.lon -72.5, (float)c.lat - 1.5);
+        fill(mapGray);
+        text(c.name, (float)c.lon - 73, (float)c.lat - 1);
+      } else if (c.name.equals("Denver")) {
+        fill(lightWhite);
+        text(c.name, (float)c.lon - 46.5, (float)c.lat + 2.5);
+        text(c.name, (float)c.lon - 45.5, (float)c.lat + 1.5);
+        fill(mapGray);
+        text(c.name, (float)c.lon - 46, (float)c.lat + 2);
+      }
     }
 
     // Calculate the Haversine distance
@@ -155,11 +191,12 @@ void draw() {
   }
 
   if (generation == maxGeneration - 2) {
-    //isRecord = true;
+    isRecord = true;
   } else if (generation == maxGeneration - 1) {
     BufferedWriter writer = null;
     try {
-      writer = new BufferedWriter(new FileWriter("/Users/cadebe/Documents/Processing/TSP_DistanceCalculator_B/results.csv", true)); 
+      writer = new BufferedWriter(
+        new FileWriter(resultsFilePath, true)); 
       writer.write(result + ", " + converge);
       writer.write("\n");
       println("RESULT: " + result);
@@ -178,14 +215,17 @@ void draw() {
         }
       }
     }
-    //endRecord();
+    if (isRecord) {
+      isRecord = false;
+      endRecord();
+    }
     //exit();
   }
 
-  if (isRecord) {
-    isRecord = false;
-    endRecord();
-  }
+  //if (isRecord) {
+  //  isRecord = false;
+  //  endRecord();
+  //}
 }
 
 double haversine(double lon1, double lon2, double lat1, double lat2) {
@@ -198,30 +238,29 @@ double haversine(double lon1, double lon2, double lat1, double lat2) {
 void init() {
   fill(red);
   textFont(fontHeaderBold);
-  text("Parsing the city data", width/2 - 120, height/2 - 20);
-  parse(reader, latList, lonList, nameList);
+  text("Parsing the city data", width/2 - 100, height/2 - 15);
+  parse(reader, lonList, latList, nameList);
 
   for (int i = 0; i < latList.size(); ++i) {
-    tmpLat.add(latList.get(i));
     tmpLon.add(lonList.get(i));
+    tmpLat.add(latList.get(i));
   }
 
-  Collections.sort(tmpLat);
   Collections.sort(tmpLon);
+  Collections.sort(tmpLat);
+
+  maxLon = tmpLon.get(0);
+  minLon = tmpLon.get(tmpLon.size() - 1);
 
   maxLat = tmpLat.get(0);
   minLat = tmpLat.get(tmpLat.size() - 1);
-  maxLon = tmpLon.get(0);
-  minLon = tmpLon.get(tmpLon.size() - 1);
 
   for (int i = 0; i < latList.size(); ++i) {
     double cx = webMercatorX(clon);
     double cy = webMercatorY(clat);
-
-    double xx = webMercatorX(latList.get(i)) - cx;
-    double yy = webMercatorY(lonList.get(i)) - cy;
-
-    path.add(new City(xx, yy, nameList.get(i)));
+    double x = webMercatorX(lonList.get(i)) - cx;
+    double y = webMercatorY(latList.get(i)) - cy;
+    path.add(new City(x, y, nameList.get(i)));
     pathTrue.add(new City(lonList.get(i), latList.get(i), nameList.get(i)));
   }
 
@@ -237,11 +276,11 @@ void parse(BufferedReader reader, ArrayList<Float> list1, ArrayList<Float> list2
     String line = reader.readLine(); 
     if (line != null) {
       String [] bits = line.split(", "); 
-      float lon = float(bits[0]); 
-      float lat = float(bits[1]); 
+      float lon = float(bits[1]); 
+      float lat = float(bits[0]); 
       String name = bits[2]; 
-      list1.add(lat);
-      list2.add(lon);
+      list1.add(lon);
+      list2.add(lat);
       list3.add(name);
     }
   }
@@ -289,15 +328,35 @@ String convertToCommaString(int value) {
   return Integer.toString(value);
 }
 
+//void printText(String haversineDistance) {
+//  fill(darkGray);
+//  textFont(fontBody);
+//  text("Travelling to the " + NUM_CITIES + " largest cities in the US ", -485, 170);
+//  text("Generations: " + convertToCommaString(generation), -485, 190);
+//  text("Convergence at generation: " + converge, -485, 210);
+//  text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", -485, 230);
+//}
+
 void printText(String haversineDistance) {
   fill(darkGray);
   textFont(fontBody);
-  text("Travelling to the " + NUM_CITIES + " largest cities in the US ", -480, 160);
-  text("Generations: " + convertToCommaString(generation), -480, 180);
-  text("Convergence at generation: " + converge, -480, 200);
-  text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", -480, 220);
+  int offset = -485;
+  int indent = -480;
+  //text("Travelling to the " + NUM_CITIES + " largest cities in the US ", offset, 70);
+  fill(darkGray);
+  textFont(fontBody);
+  text("Genetic Algorithm Parameters:", offset, 70);
+  text("*  Generations: " + convertToCommaString(generation), indent, 90);
+  text("*  Population size: " + convertToCommaString(numPop) + " individuals", indent, 110);
+  text("*  Crossover rate: " + crossoverRate + "%", indent, 130);
+  text("*  Mutation rate: " + mutationRate + "%", indent, 150);
+  text("*  Elitism generation gap: " + convertToCommaString(randomStrategy.numElite) + 
+    " individuals", indent, 170);
+  fill(darkGray);
+  textFont(fontBodyBold);
+  text("Convergence at generation: " + converge, offset, 210);
+  text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", offset, 230);
 }
-
 void keyReleased() {
   if (key == 'P' || key == 'p') {
     isRecord = !isRecord;

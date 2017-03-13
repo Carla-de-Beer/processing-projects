@@ -1,17 +1,17 @@
 class City {
 
-  private double lat, lon;
+  private double lon, lat;
   private String name;
 
-  public City(double lat, double lon, String name) {
-    this.lat = lat;
+  public City(double lon, double lat, String name) {
     this.lon = lon;
+    this.lat = lat;
     this.name = name;
   }
 
   public City(City other) {
-    this.lat = other.lat;
     this.lon = other.lon;
+    this.lat = other.lat;
     this.name = other.name;
   }
 
@@ -26,5 +26,4 @@ class City {
   public double getLat() {
     return lat;
   }
-  
 }
