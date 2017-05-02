@@ -27,7 +27,7 @@ ArrayList<Float> tmpLat = new ArrayList();
 
 int NUM_CITIES = 50;
 int generation = 0;
-int maxGeneration = 351;
+int maxGeneration = 350;
 int numPop = 5000;
 double crossoverRate = 85.0;
 double mutationRate = 25.0;
@@ -45,7 +45,7 @@ String result;
 
 color red = color(255, 64, 64);
 color white = color(250);
-color lightWhite = color(250, 200);
+color lightWhite = color(250);
 color darkGray = color(80, 200);
 color mapGray = color(184);
 
@@ -65,7 +65,7 @@ int zoom = 3;
 
 Date dNow;
 SimpleDateFormat ft;
-boolean isRecord = false;
+boolean isRecord = true;
 // Amend this as required
 String resultsFilePath = "/Users/cadebe/Documents/Processing/TSP_DistanceCalculator_With_Map/results.csv";
 
@@ -86,7 +86,7 @@ void draw() {
   if (isRecord) {
     dNow = new Date();
     ft = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    beginRecord(PDF, "./PDF/" + ft.format(dNow) + ".pdf");
+    //beginRecord(PDF, "./PDF/" + ft.format(dNow) + ".pdf");
     //beginRecord(PDF, "./PDF/" + args[0] + ".pdf");
   }
 
@@ -101,13 +101,10 @@ void draw() {
     pathTrue.clear();
     init();
   } else if (frameCount >= NUM_CITIES + 10) {
-
     translate(width/2, height/2);
     image(img, 0, 0, width, height);
 
-    randomStrategy.calculateOptimal();
-    randomStrategy.calculateBestEver();
-    randomStrategy.generatePopulation();
+    randomStrategy.runGA();
     generation++;
 
     if (Math.abs(record - randomStrategy.getBestFitness()) > 0.00001) {
@@ -129,7 +126,7 @@ void draw() {
     strokeWeight(1);
 
     for (City c : path) {
-      fill(lightWhite);
+      fill(lightWhite, 170);
       ellipse((float)c.lon, (float)c.lat, 8, 8);
 
       textFont(mapBody);
@@ -144,19 +141,19 @@ void draw() {
         c.name.equals("Phoenix") || c.name.equals("Fresno") || 
         c.name.equals("Omaha") || c.name.equals("Portland") || 
         c.name.equals("Seattle")) { 
-        fill(lightWhite);
+        fill(lightWhite, 200);
         text(c.name, (float)c.lon + 9.5, (float)c.lat + 4.5);
         text(c.name, (float)c.lon + 8.5, (float)c.lat + 3.5);
         fill(mapGray);
         text(c.name, (float)c.lon + 9, (float)c.lat + 4);
       } else if ( c.name.equals("Minneapolis") || c.name.equals("San Antonio")) {
-        fill(lightWhite);
+        fill(lightWhite, 200);
         text(c.name, (float)c.lon - 73.5, (float)c.lat - 0.5);
         text(c.name, (float)c.lon -72.5, (float)c.lat - 1.5);
         fill(mapGray);
         text(c.name, (float)c.lon - 73, (float)c.lat - 1);
       } else if (c.name.equals("Denver")) {
-        fill(lightWhite);
+        fill(lightWhite, 200);
         text(c.name, (float)c.lon - 46.5, (float)c.lat + 2.5);
         text(c.name, (float)c.lon - 45.5, (float)c.lat + 1.5);
         fill(mapGray);
@@ -251,7 +248,6 @@ void init() {
 
   maxLon = tmpLon.get(0);
   minLon = tmpLon.get(tmpLon.size() - 1);
-
   maxLat = tmpLat.get(0);
   minLat = tmpLat.get(tmpLat.size() - 1);
 
@@ -268,7 +264,7 @@ void init() {
   for (int i = 0; i < numPop; ++i) {
     populationList.add(new Route(path, true));
   }
-  randomStrategy = new RandomStrategy(populationList, numPop, maxGeneration, crossoverRate, mutationRate, generationGap, NUM_CITIES);
+  randomStrategy = new RandomStrategy(populationList, numPop, crossoverRate, mutationRate, generationGap, NUM_CITIES);
 }
 
 void parse(BufferedReader reader, ArrayList<Float> list1, ArrayList<Float> list2, ArrayList<String> list3) {
@@ -328,6 +324,15 @@ String convertToCommaString(int value) {
   return Integer.toString(value);
 }
 
+//void printText(String haversineDistance) {
+//  fill(darkGray);
+//  textFont(fontBody);
+//  text("Travelling to the " + NUM_CITIES + " largest cities in the US ", -485, 170);
+//  text("Generations: " + convertToCommaString(generation), -485, 190);
+//  text("Convergence at generation: " + converge, -485, 210);
+//  text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", -485, 230);
+//}
+
 void printText(String haversineDistance) {
   fill(darkGray);
   textFont(fontBody);
@@ -348,6 +353,7 @@ void printText(String haversineDistance) {
   text("Convergence at generation: " + converge, offset, 210);
   text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", offset, 230);
 }
+
 void keyReleased() {
   if (key == 'P' || key == 'p') {
     isRecord = !isRecord;
