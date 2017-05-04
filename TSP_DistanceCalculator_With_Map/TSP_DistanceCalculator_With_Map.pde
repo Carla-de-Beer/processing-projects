@@ -324,15 +324,6 @@ String convertToCommaString(int value) {
   return Integer.toString(value);
 }
 
-//void printText(String haversineDistance) {
-//  fill(darkGray);
-//  textFont(fontBody);
-//  text("Travelling to the " + NUM_CITIES + " largest cities in the US ", -485, 170);
-//  text("Generations: " + convertToCommaString(generation), -485, 190);
-//  text("Convergence at generation: " + converge, -485, 210);
-//  text("Total distance travelled: " + haversineDistance + " km (Haversine distance)", -485, 230);
-//}
-
 void printText(String haversineDistance) {
   fill(darkGray);
   textFont(fontBody);
