@@ -1,9 +1,9 @@
 // Carla de Beer //<>//
-// September 2016; updted March 2017
+// September 2016; updated March 2017
 // Genetic algorithm to find an optimised solution to the Travelling Salesman Problem.
 // The sketch dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities.
 // The actual physical distance on the route, calculated as the Haversine distance, is also shown.
-// Specifiable parameters: crossover rate, mutation rate, popuation size, max. no. iterations, elitism generation gap.
+// Specifiable parameters: crossover rate, mutation rate, population size, max. no. iterations, elitism generation gap.
 // City data obtained from: https://gist.github.com/Miserlou/c5cd8364bf9b2420bb29
 // The crossover strategy makes use of Modified Order Crossover (MOX), as described in:
 // http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.9167&rep=rep1&type=pdf
@@ -66,8 +66,8 @@ int zoom = 3;
 Date dNow;
 SimpleDateFormat ft;
 boolean isRecord = true;
-// Amend this as required
-String resultsFilePath = "/Users/cadebe/Documents/Processing/TSP_DistanceCalculator_With_Map/results.csv";
+// *** Amend this filepath as required should you wish to save the results
+String resultsFilePath = "/TSP_DistanceCalculator_With_Map/results.csv";
 
 void setup() {
   size(1024, 512);
@@ -79,7 +79,6 @@ void setup() {
   fontBody = createFont("ArialMT", 12);
   fontBodyBold = createFont("Arial-BoldMT", 12);
   mapBody = createFont("Helvetica-Bold", 11);
-  //println(PFont.list());
 }
 
 void draw() {
@@ -101,7 +100,7 @@ void draw() {
     pathTrue.clear();
     init();
   } else if (frameCount >= NUM_CITIES + 10) {
-    translate(width/2, height/2);
+    translate(width * 0.5, height * 0.5);
     image(img, 0, 0, width, height);
 
     randomStrategy.runGA();
@@ -227,8 +226,8 @@ void draw() {
 
 double haversine(double lon1, double lon2, double lat1, double lat2) {
   double p = 0.017453292519943295;
-  double a = 0.5 - Math.cos((lat2 - lat1) * p) / 2
-    + Math.cos(lat1 * p) * Math.cos(lat2 * p) * (1 - Math.cos((lon2 - lon1) * p)) / 2;
+  double a = 0.5 - Math.cos((lat2 - lat1) * p) * 0.5
+    + Math.cos(lat1 * p) * Math.cos(lat2 * p) * (1 - Math.cos((lon2 - lon1) * p)) * 0.5;
   return 12742 * Math.asin(Math.sqrt(a));
 }
 
@@ -295,7 +294,7 @@ double webMercatorX(float lon) {
 double webMercatorY(float lat) {
   lat = radians(lat);
   double a = (256 / Math.PI) * Math.pow(2, zoom);
-  double b = Math.tan(Math.PI / 4 + lat / 2);
+  double b = Math.tan(Math.PI * 0.25 + lat * 0.5);
   double c = Math.PI - Math.log(b);
   return a * c;
 }

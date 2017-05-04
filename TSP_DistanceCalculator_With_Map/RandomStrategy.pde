@@ -24,10 +24,10 @@ class RandomStrategy {
     double mutationRate, double generationGap, int numCities) {
     this.populationList = new ArrayList<Route>(populationList);
     this.numPop = numPop;
-    this.crossoverRate = crossoverRate / 100;
-    this.mutationRate = mutationRate / 100;
+    this.crossoverRate = crossoverRate * 0.01;
+    this.mutationRate = mutationRate * 0.01;
     this.numCities = numCities;
-    this.numElite = (int) (this.numPop * generationGap / 100);
+    this.numElite = (int) (this.numPop * generationGap * 0.01);
     this.optimalRoute = null;
     this.optimalValue = Double.POSITIVE_INFINITY;
     this.overallBestFitness = Double.POSITIVE_INFINITY;
