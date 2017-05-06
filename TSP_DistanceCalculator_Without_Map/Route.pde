@@ -56,5 +56,4 @@ class Route {
   public void setChromosome(ArrayList<City> chromosome) {
     this.chromosome = chromosome;
   }
-  
 }

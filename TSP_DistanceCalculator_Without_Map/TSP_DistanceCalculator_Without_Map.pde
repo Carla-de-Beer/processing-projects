@@ -105,10 +105,9 @@ void draw() {
     }
     endShape();
 
-    strokeWeight(1);
-
     for (City c : path) {
       fill(lightWhite, 180);
+      strokeWeight(1);
       ellipse((float)c.lon, (float)c.lat, 8, 8);
       fill(lightWhite, 180);
       if (c.name.equals("Seattle") || c.name.equals("Indianapolis") ||
@@ -209,8 +208,8 @@ void draw() {
 
 double haversine(double lon1, double lon2, double lat1, double lat2) {
   double p = 0.017453292519943295;
-  double a = 0.5 - Math.cos((lat2 - lat1) * p) / 2
-    + Math.cos(lat1 * p) * Math.cos(lat2 * p) * (1 - Math.cos((lon2 - lon1) * p)) / 2;
+  double a = 0.5 - Math.cos((lat2 - lat1) * p) * 0.5
+    + Math.cos(lat1 * p) * Math.cos(lat2 * p) * (1 - Math.cos((lon2 - lon1) * p)) * 0.5;
   return 12742 * Math.asin(Math.sqrt(a));
 }
 

@@ -14,11 +14,8 @@ class RandomStrategy {
   private int maxIter;
   private double crossoverRate;
   private double mutationRate;
-  private MyRandom myRandom = new MyRandom();
-
   private int numCities;
   private ArrayList<Route> populationList = new ArrayList<Route>();
-  private ArrayList<City> overallBestRoute = new ArrayList<City>();
   private double overallBestFitness = Double.POSITIVE_INFINITY;
   private Route optimalRoute;
   private double optimalValue;
@@ -29,9 +26,9 @@ class RandomStrategy {
     this.numCities = numCities;
     this.numPop = numPop;
     this.maxIter = maxIter;
-    this.crossoverRate = crossoverRate / 100;
-    this.mutationRate = mutationRate / 100;
-    numElite = (int) (this.numPop * generationGap / 100);
+    this.crossoverRate = crossoverRate * 0.01;
+    this.mutationRate = mutationRate * 0.01;
+    numElite = (int) (this.numPop * generationGap * 0.01);
     this.populationList = new ArrayList<Route>(populationList);
     this.optimalRoute = null;
     this.optimalValue = Double.POSITIVE_INFINITY;
@@ -61,8 +58,8 @@ class RandomStrategy {
       ArrayList<City> child = new ArrayList<City>();
 
       // Randomly select two parents from the population
-      int randA = myRandom.randomInt(numPop);
-      int randB = myRandom.randomInt(numPop);
+      int randA = floor(random(numPop));
+      int randB = floor(random(numPop));
       parentA = (populationList.get(randA).getChromosome());
       parentB = (populationList.get(randB).getChromosome());
 
@@ -99,7 +96,7 @@ class RandomStrategy {
   public void crossover(ArrayList<City> parentA, ArrayList<City> parentB, ArrayList<City> child) {
 
     ArrayList<City> end = new ArrayList<City>();
-    int rand = myRandom.randomInt(numCities);
+    int rand = floor(random(numCities));
 
     // Copy over first part of the chromosome
     for (int i = 0; i < rand; ++i) {
@@ -135,8 +132,8 @@ class RandomStrategy {
   }
 
   public void mutate(ArrayList<City> path) {
-    int rand1 = myRandom.randomInt(numCities);
-    int rand2 = myRandom.randomInt(numCities);
+    int rand1 = floor(random(numCities));
+    int rand2 = floor(random(numCities));
     Collections.swap(path, rand1, rand2);
   }
 
@@ -198,10 +195,8 @@ class RandomStrategy {
   }
 
   public void calculateBestEver() {
-    ArrayList<City> currentBestRoute = optimalRoute.getChromosome();
     double currentBestFitness = optimalValue;
     if (currentBestFitness < overallBestFitness) {
-      overallBestRoute = new ArrayList<City>(currentBestRoute);
       overallBestFitness = currentBestFitness;
     }
   }
@@ -217,5 +212,4 @@ class RandomStrategy {
   public final double getBestFitness() {
     return optimalValue;
   }
-
 }
