@@ -1,17 +1,17 @@
 class City {
 
-  private float lat, lon;
+  private float lon, lat;
   private String name;
 
-  public City(float lat, float lon, String name) {
-    this.lat = lat;
+  public City(float lon, float lat, String name) {
     this.lon = lon;
+    this.lat = lat;
     this.name = name;
   }
 
   public City(City other) {
-    this.lat = other.lat;
     this.lon = other.lon;
+    this.lat = other.lat;
     this.name = other.name;
   }
 
@@ -20,7 +20,7 @@ class City {
   }
 
   public float dist(City other) {
-    return sqrt((other.lat - lat) * (other.lat - lat) + (other.lon - lon) * (other.lon - lon));
+    return sqrt((other.lon - lon) * (other.lon - lon) + (other.lat - lat) * (other.lat - lat));
   }
 
   public float getLon() {
