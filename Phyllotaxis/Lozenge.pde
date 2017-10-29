@@ -4,11 +4,11 @@ class Lozenge {
   int n;
   float xoff, yoff;
 
-  Lozenge(float x_, float y_, float w_, int n_) {
-    x = x_;
-    y = y_;
-    w = w_;
-    n = n_;
+  Lozenge(float x, float y, float w, int n) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
+    this.n = n;
 
     xoff = cos(radians(60)) * w;
     yoff = sin(radians(60)) * w;

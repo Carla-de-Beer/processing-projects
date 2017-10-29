@@ -1,7 +1,8 @@
 // Carla de Beer
 // August 2016
-// Sunflower-like construction based on phyllotaxis design.
-// Based on Daniel Shiffman's Coding Rainbow example.
+// Sunflower-like construction based on phyllotaxis design principles.
+// Based on Daniel Shiffman's Coding Train coding challenge:
+// https://www.youtube.com/watch?v=MQMJ0xWSMWE
 
 Lozenge lozenge;
 int n = 0;
