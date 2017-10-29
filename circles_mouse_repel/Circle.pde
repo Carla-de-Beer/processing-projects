@@ -17,7 +17,7 @@ class Circle {
 
   void move() {
     float distance = dist(mouseX, mouseY, xpos, ypos);
-    if (distance <= 50) {
+    if (distance <= 100) {
       if (mouseX >= xpos) xpos -= sp;
       if (mouseX < xpos)  xpos += sp;
       if (mouseY >= ypos) ypos -= sp;

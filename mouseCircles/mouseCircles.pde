@@ -24,7 +24,7 @@ void setup() {
 }
 
 void draw() { 
-  background(10);
+  background(55);
   pushMatrix();
   translate((width - (SPACING*(COLS-1)))/2, (height - (SPACING*(ROWS-1)))/2);
   for (int i = 0; i < COLS; ++i) {
