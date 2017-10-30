@@ -5,9 +5,9 @@ class Particle {
   float val = 10.0;
 
   Particle() {
-    pos = new PVector(random(height), random(width));
-    acc = new PVector(0, 0);
-    vel = new PVector( random(-val, val), random(-val, val));
+    this.pos = new PVector(random(height), random(width));
+    this.acc = new PVector(0, 0);
+    this.vel = new PVector( random(-val, val), random(-val, val));
   }
 
   void run() { 

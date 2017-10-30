@@ -1,6 +1,5 @@
 // Carla de Beer
-// Created November 2010
-// Updated January 2014
+// Created November 2010; updated January 2014.
 // Animated circle grid.
 
 Circle [][] grid;

@@ -1,13 +1,13 @@
 class Circle {
+  Particle dot;
   float xpos;
   float ypos;
   float maxDistance = dist(0, 0, width, height);
-  Particle dot;
 
-  Circle(float _xpos, float _ypos) {
-    xpos = _xpos;
-    ypos = _ypos;
-    dot = new Particle();
+  Circle(float xpos, float ypos) {
+    this.xpos = xpos;
+    this.ypos = ypos;
+    this.dot = new Particle();
   }
 
   void display(int i, int j) {  
@@ -16,8 +16,6 @@ class Circle {
     dot.run();
     popMatrix();
     float mouseDist = dist(dot.pos.x, dot.pos.y, i*SPACING, j*SPACING);
-    //float mouseDist = dist(mouseX, mouseY, i*SPACING, j*SPACING);
-
     float rad = (mouseDist / maxDistance) * 200.0;
     fill(255, 50);
     for (int k = 0; k < 4; ++k) { 
