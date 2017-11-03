@@ -1,6 +1,6 @@
 // Carla de Beer
 // January 2014
-// Self-organising net structure: 3D
+// Self-organising net structure: 3D.
 // Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code)
 
 import peasy.org.apache.commons.math.*;
