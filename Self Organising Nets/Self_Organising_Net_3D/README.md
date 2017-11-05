@@ -2,7 +2,9 @@
 
 Self-organising net structure: 3D.
 
-Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code).
+Wrapping a 2D mesh onto a 3D point cloud.
+
+Steer, seek arrive algorithms based on those by Daniel Shiffman (Nature of Code).
 
 </br>
 <p align="center">
@@ -10,4 +12,3 @@ Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code
   <img src="images/screenShot-02.png" width="250px"/>
   <img src="images/screenShot-01.png" width="250px"/>
 </p>
-

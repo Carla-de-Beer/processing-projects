@@ -1,6 +1,8 @@
 // Carla de Beer
 // January 2014
 // Self-organising net structure: 3D.
+// Wrapping a 2D mesh onto a 3D point cloud.
+
 // Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code)
 
 import peasy.org.apache.commons.math.*;
