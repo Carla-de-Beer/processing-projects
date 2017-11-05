@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=ZiYdOwOrGyc&t=1705s
 * Haversine distance formula: 
 http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
+</br>
 <p align="center">
   <img src="images/screenShot.png"/>
 </p>
