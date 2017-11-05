@@ -1,10 +1,10 @@
-# Self-Organising Net 3D #
+# Self-Organising Net 2D #
 
-Self-organising net structure: 3D.
-
-Wrapping a 2D mesh onto a 3D point cloud.
+Randomising a 2D mesh away from its original hexagonal structure.
 
 Steer, seek arrive algorithms based on those by Daniel Shiffman (Nature of Code).
+
+View the project video here: https://vimeo.com/85047354
 
 </br>
 <p align="center">
