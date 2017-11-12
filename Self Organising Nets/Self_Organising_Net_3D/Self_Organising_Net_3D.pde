@@ -2,8 +2,9 @@
 // January 2014
 // Self-organising net structure: 3D.
 // Wrapping a 2D mesh onto a 3D point cloud.
+// Press 'R' to restart, and 'U' to reverse the direction of steer.
 
-// Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code)
+// Steer and arrive alogorithms based on those by Daniel Shiffman ("Nature of Code").
 
 import peasy.org.apache.commons.math.*;
 import peasy.*;
@@ -82,7 +83,6 @@ void setup() {
 
   myFont1 = createFont("Consolas", 14, true);
 }
-
 
 void draw() {      
   if (record == true) {
@@ -172,8 +172,9 @@ void draw() {
     endRaw();
     record = false; // Stop recording to the file
   }
-
+  
   //saveFrame("image-#####.tif");
+  
 }
 
 void importTextData() {   

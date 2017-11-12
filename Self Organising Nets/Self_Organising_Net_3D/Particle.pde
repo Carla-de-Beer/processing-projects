@@ -3,10 +3,10 @@ class Particle {
   PVector acc;
   PVector vel;
 
-  Particle(PVector _pos) {
-    pos = _pos;
-    acc = new PVector(0, 0, 0);
-    vel = new PVector(0, 0, 0);
+  Particle(PVector pos) {
+    this.pos = pos;
+    this.acc = new PVector(0, 0, 0);
+    this.vel = new PVector(0, 0, 0);
   }
 
   void run() { 
@@ -30,10 +30,6 @@ class Particle {
     popMatrix();
   }
 
-  void seek(PVector target) {
-    acc.add(steer(target, false));
-  }
-
   void arrive(PVector target) {
     acc.add(steer(target, true));
   }
@@ -46,7 +42,7 @@ class Particle {
     PVector desired = PVector.sub(target, pos);  // A vector pointing from the location to the target
 
     float d = desired.mag(); // Distance from the target is the magnitude of the vector
-    // println("d = " + d);
+    //println("d = " + d);
     // If the distance is greater than 0, calc steering (otherwise return zero vector)
     if (d > 0) {
       // Normalize desired

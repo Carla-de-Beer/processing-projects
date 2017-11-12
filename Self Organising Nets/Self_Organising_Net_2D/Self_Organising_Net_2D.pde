@@ -1,7 +1,9 @@
 // Carla de Beer
 // January 2014
-// Self-organising net structure: 2D
-// Steer, seek arrive alogorithms based on those by Daniel Shiffman (Nature of Code)
+// Self-organising net structure: 2D.
+// Press 'R' to restart, and 'U' to reverse the direction of steer.
+
+// Steer and arrive alogorithms based on those by Daniel Shiffman ("Nature of Code").
 
 import processing.pdf.*;
 import processing.opengl.*;
@@ -22,7 +24,6 @@ float mult = 25;
 boolean showParticles = true;
 boolean reverse = true;
 boolean showLines = true;
-
 
 void setup() {
   size(900, 900, OPENGL);
@@ -130,7 +131,6 @@ void draw() {
     record = false;
   }
 }
-
 
 void keyReleased() {
   if (key == 'R' || key =='r') {// toggle re-start
