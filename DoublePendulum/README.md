@@ -1,4 +1,4 @@
-#Double Pendula
+# Double Pendulum
 
 Four double pendula with various settings.
 
