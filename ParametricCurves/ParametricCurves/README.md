@@ -1,4 +1,4 @@
-#Parametric Curves
+# Parametric Curves
 
 Parametric curve equations, including a set of Lissajous figures.
 
@@ -14,19 +14,18 @@ This allows for an input parameter to be fed into the sketch (select an integer 
 
 <br/>
 <p align="center">
-  <img src="Spirograph/images/1.png" width="250px"/>
-  <img src="Spirograph/images/2.png" width="250px"/>
-  <img src="Spirograph/images/3.png" width="250px"/>
-  <img src="Spirograph/images/4.png" width="250px"/>
-  <img src="Spirograph/images/5.png" width="250px"/>
-  <img src="Spirograph/images/6.png" width="250px"/>
-  <img src="Spirograph/images/7.png" width="250px"/>
-  <img src="Spirograph/images/8.png" width="250px"/>
-  <img src="Spirograph/images/9.png" width="250px"/>
-  <img src="Spirograph/images/10.png" width="250px"/>
-  <img src="Spirograph/images/11.png" width="250px"/>
-  <img src="Spirograph/images/12.png" width="250px"/>
-  <img src="Spirograph/images/13.png" width="250px"/>
-  <img src="Spirograph/images/14.png" width="250px"/>
-  <img src="Spirograph/images/15.png" width="250px"/>
+  <img src="images/1.png" width="150px"/>
+  <img src="images/2.png" width="150px"/>
+  <img src="images/3.png" width="150px"/>
+  <img src="images/4.png" width="150px"/>
+  <img src="images/5.png" width="150px"/>
+  <img src="images/6.png" width="150px"/>
+  <img src="images/7.png" width="150px"/>
+  <img src="images/8.png" width="150px"/>
+  <img src="images/9.png" width="150px"/>
+  <img src="images/10.png" width="150px"/>
+  <img src="images/11.png" width="150px"/>
+  <img src="images/12.png" width="150px"/>
+  <img src="images/13.png" width="150px"/>
+  <img src="images/15.png" width="150px"/>
 </p>
