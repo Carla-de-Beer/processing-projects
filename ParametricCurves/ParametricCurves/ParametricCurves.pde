@@ -2,12 +2,12 @@
 // Created: January 2014
 // Updated: March 2018
 // Lissajous and parametric curve equations that generate geometric patterns.
-// similar to that created by a traditional spirograph.
-// Change the parameters to the equations to generate different patterns.
 // Inspiration taken from: "Chapter 10: Paramteric Equations and Polar Coordinates" in: 
 // STEWART, J., 2012. "Calculus Early Transcendentals". 7th Edition, p636 - 641.
 
-public static final int CHOICE = 7;
+// Run the bash script executable from the terminal with the command `./runSketch <num>` where <num> in an integer value between 1 and 15.
+
+int choice;
 float r = 165.0;
 float theta = 0.0;
 PVector pos;
@@ -20,11 +20,19 @@ void setup() {
   smooth();
   colorMode(RGB);
   prev = new PVector();
+  
+  // Receive input parameter
+  try {
+    choice = Integer.parseInt(args[0]);
+  } 
+  catch (NumberFormatException e) {
+    System.err.println("Argument '" + args[0] + "' must be an integer.");
+    System.exit(1);
+  }
 }
 
 void draw() {
-
-  pos = getCoordinates(CHOICE);
+  pos = getCoordinates(choice);
 
   if (pos.x == -999 & pos.y == -999) {
     fill(10, 200);
@@ -91,12 +99,12 @@ PVector getCoordinates(int choice) {
     y = 1.5*r*sin(10*theta);
     break;
   case 6:
-    // 9. Parametric curve equation (heart)
+    // 6. Parametric curve equation (heart)
     x = 1.5*r*pow(cos(5*theta*PI), 3);
     y = 1.5*r*pow(sin(4*theta*PI), 3);
     break;
   case 7:
-    // 9. Parametric curve equation
+    // 7. Parametric curve equation
     x = 60*5*pow(sin(theta), 3);
     y = 60*(4*cos(theta) - 1.3*cos(2*theta) - 0.6*cos(3*theta) - 0.2*cos(4*theta)) + 25;
     break;  
@@ -120,7 +128,6 @@ PVector getCoordinates(int choice) {
     // 11. Parametric curve equation
     x = 0.75*(r*sin(theta) + r*cos(10*theta + PI/2) + r*0.5*sin(15*theta));
     y = 0.75*(r*cos(theta) + r*sin(10*theta + PI/2) + r*0.5*cos(15*theta));
-
     break;  
   case 12:
     // 12. Parametric curve equation
@@ -152,6 +159,5 @@ PVector getCoordinates(int choice) {
 }
 
 void keyReleased() {
-  if (key == 'R' || key == 'r') setup();
   if (key == 'S' || key == 's') saveFrame();
 }
