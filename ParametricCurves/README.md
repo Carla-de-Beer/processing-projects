@@ -6,6 +6,8 @@ Lissajous figures constitute a subset of parametric equations.
 
 <br/>
 <p align="center">
-  <img src="ParametricCurves/images/screenShot.png" width="400px"/>
+  <img src="ParametricCurves/images/screenShot-01.png" width="250px"/>
+  <img src="ParametricCurves/images/screenShot-02.png" width="250px"/>
+  <img src="ParametricCurves/images/screenShot-03.png" width="250px"/>
 </p>
 
