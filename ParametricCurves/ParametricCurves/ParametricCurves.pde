@@ -45,12 +45,11 @@ void draw() {
 
   noStroke();
   noFill();
-  stroke(pos.mag(), 25, 255);
+  stroke(255 - pos.mag()*0.65, 25, 255);
   strokeWeight(1);
 
   translate(width*0.5, height*0.5);
   if (frameCount == 1) {
-    fill(255, 0, 0, 50);
     prev.x = pos.x;
     prev.y = pos.y;
     println(theta);
@@ -127,7 +126,7 @@ PVector getCoordinates(int choice) {
   case 11:
     // 11. Parametric curve equation
     x = 0.75*(r*sin(theta) + r*cos(10*theta + PI/2) + r*0.5*sin(15*theta));
-    y = 0.75*(r*cos(theta) + r*sin(10*theta + PI/2) + r*0.5*cos(15*theta));
+    y = 0.75*(r*cos(theta) + r*sin(10*theta + PI/2) + r*0.5*cos(15*theta)) - 20;
     break;  
   case 12:
     // 12. Parametric curve equation
