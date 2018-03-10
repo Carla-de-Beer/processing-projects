@@ -1,13 +1,13 @@
 // Carla de Beer
 // January 2015
-// Spirograph sketches on a 4 x 4 grid
+// Parametric curve sketches on a 4 x 4 grid
 
-float r = 50.0;
 public static final int STOP = 90;
 Curve [][] curves;
 int rows = 4; 
 int cols = 4;
 PVector pos;
+float r = 50.0;
 
 void setup() {
   size(780, 780);

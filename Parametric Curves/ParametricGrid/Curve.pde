@@ -28,4 +28,3 @@ class Curve {
     theta += 0.002;
   }
 }
-
