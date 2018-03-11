@@ -32,5 +32,5 @@ src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;
 Lissajous figures therefore constitute a subset of parametric equations.
 
 This folder contains the following parametric sketches:
-* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurves) The sketch is run from the command line with one of the pre-defined parametric equations provided
-* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricGrid) A grid with a set of 4 x 4 parametric curves
+* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/Parametric%20Curves/ParametricCurves) The sketch is run from the command line with one of the pre-defined parametric equations provided
+* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/Parametric%20Curves/ParametricGrid) A grid with a set of 4 x 4 parametric curves
