@@ -1,15 +1,13 @@
 # Parametric Curves
 
-Parametric curve equations, including a set of Lissajous figures.
+This sketch contains a set of 15 pre-defined parametric curve equations, including a set of Lissajous figures.
 
-The file contains a set of 15 pre-defined equations for each parametric curve.
-
-<br/>
+##### Curves generated
 <p align="center">
   <img src="images/1.png" width="155px"/>
   <img src="images/2.png" width="155px"/>
   <img src="images/3.png" width="155px"/>
-  <img src="images/4.png" width="155px"/>
+  <img src="images/4.png" width="155px"/>s
   <img src="images/5.png" width="155px"/>
   <br/><br/>
   <img src="images/6.png" width="155px"/>
@@ -24,7 +22,63 @@ The file contains a set of 15 pre-defined equations for each parametric curve.
    <img src="images/14.png" width="155px"/>
   <img src="images/15.png" width="155px"/>
 </p>
-<br/>
+
+##### Equations used
+1. Circle equation
+  * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos(\theta)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin(\theta)" />
+2. Lissajous equation
+  * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos(\theta)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin(\theta)" />
+3. Lissajous equation
+    * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(5\theta\pi)" />
+    * <img
+    src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(4\theta\pi)" />
+4. Lissajous equation
+    * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(8\theta&space;&plus;&space;\pi/4)" />
+    * <img
+    src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(5\theta)" />
+5. Lissajous equation
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(11\theta&space;&plus;&space;\pi/2)" />
+    * <img
+    src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(10\theta)" />
+6. Parametric curve equation (heart)
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\cos^{3}(5\theta\pi)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin^{3}(4\theta\pi)" />
+7. Parametric curve equation
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin^{3}(\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;\cos(theta)&space;-&space;\cos(2\theta)&space;-&space;\cos(3\theta)&space;-&space;\cos(4\theta)" />
+8. Parametric curve equation
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;r&space;=&space;\sin(6\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos(\theta)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin(\theta)" />
+9. Parametric curve equation
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\cos(5\theta)&space;&plus;&space;r\sin(13\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(5\theta)&space;&plus;&space;r\cos(13\theta)" />
+10. Parametric curve equation
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=r\sin(\theta)&space;&plus;&space;r\cos(5\theta)&space;&plus;&space;r\sin(15\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(5\theta)&space;&plus;&space;r\cos(15\theta)" />
+11. Parametric curve equation
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\cos(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\sin(15\theta)" />
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\cos(15\theta)" />
+12. Parametric curve equation
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\cos(\theta)&space;-&space;r\cos^{7}(7\theta)" />
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(\theta)&space;-&space;r\sin^{7}(7\theta)" />
+13. Parametric curve equation
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;\sin(\theta)&space;-&space;\sin(2.3\theta)" />
+    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;\cos(\theta)" />
+14. Parametric curve equation
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\sin(5\theta)&space;&plus;&space;r\cos(2.3\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\cos(5\theta)&space;&plus;&space;r\sin(2.3\theta)" />
+15. Parametric curve equation (butterfly)
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;a&space;=&space;e^{\cos(\theta)}" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;b&space;=&space;2\cos(4\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;c&space;=&space;sin^{5}(\theta/12)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)(a&space;-&space;b&space;-&space;c)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)(a&space;-&space;b&space;-&space;c)" />
 
 This Processing sketch is run by means of a command line entry contained within the accompanying bash script file `runSketch`.
 This allows for an input parameter to be fed into the sketch (select an integer value between 1 and 15 to run the file with.).
