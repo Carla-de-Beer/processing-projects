@@ -2,7 +2,7 @@
 
 This sketch contains a set of 15 pre-defined parametric curve equations, including a set of Lissajous figures.
 
-##### Curves generated
+## Curves generated
 <p align="center">
   <img src="images/1.png" width="155px"/>
   <img src="images/2.png" width="155px"/>
@@ -23,7 +23,7 @@ This sketch contains a set of 15 pre-defined parametric curve equations, includi
   <img src="images/15.png" width="155px"/>
 </p>
 
-##### Equations used
+## Equations used
 1. Circle equation
   * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos(\theta)" />
   * <img
