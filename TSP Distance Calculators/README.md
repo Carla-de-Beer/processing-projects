@@ -14,6 +14,7 @@ http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.9167&rep=rep1&type=p
 http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 * Map from MapBox; https://www.mapbox.com/api-documentation/#retrieve-a-sprite-image-or-json
 
+</br>
 <p align="center">
   <img src="TSP_Distance_Calculator_With_Map/gif/TSP Distance Calculator.gif"/>
 </p>
