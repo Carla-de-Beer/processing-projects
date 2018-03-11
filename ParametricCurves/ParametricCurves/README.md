@@ -7,7 +7,7 @@ This sketch contains a set of 15 pre-defined parametric curve equations, includi
   <img src="images/1.png" width="155px"/>
   <img src="images/2.png" width="155px"/>
   <img src="images/3.png" width="155px"/>
-  <img src="images/4.png" width="155px"/>s
+  <img src="images/4.png" width="155px"/>
   <img src="images/5.png" width="155px"/>
   <br/><br/>
   <img src="images/6.png" width="155px"/>
@@ -33,17 +33,17 @@ This sketch contains a set of 15 pre-defined parametric curve equations, includi
   * <img
   src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin(\theta)" />
 3. Lissajous equation
-    * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(5\theta\pi)" />
-    * <img
-    src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(4\theta\pi)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(5\theta\pi)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(4\theta\pi)" />
 4. Lissajous equation
-    * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(8\theta&space;&plus;&space;\pi/4)" />
-    * <img
-    src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(5\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x&space;=&space;r\cos(8\theta&space;&plus;&space;\pi/4)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\bg_white&space;y&space;=&space;r\sin(5\theta)" />
 5. Lissajous equation
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(11\theta&space;&plus;&space;\pi/2)" />
-    * <img
-    src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(10\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(11\theta&space;&plus;&space;\pi/2)" />
+  * <img
+  src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(10\theta)" />
 6. Parametric curve equation (heart)
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\cos^{3}(5\theta\pi)" />
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin^{3}(4\theta\pi)" />
@@ -62,14 +62,14 @@ This sketch contains a set of 15 pre-defined parametric curve equations, includi
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=r\sin(\theta)&space;&plus;&space;r\cos(5\theta)&space;&plus;&space;r\sin(15\theta)" />
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(5\theta)&space;&plus;&space;r\cos(15\theta)" />
 11. Parametric curve equation
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\cos(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\sin(15\theta)" />
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\cos(15\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\cos(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\sin(15\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\sin(10\theta&space;&plus;&space;\pi/2)&space;&plus;&space;r\cos(15\theta)" />
 12. Parametric curve equation
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\cos(\theta)&space;-&space;r\cos^{7}(7\theta)" />
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(\theta)&space;-&space;r\sin^{7}(7\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\cos(\theta)&space;-&space;r\cos^{7}(7\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\sin(\theta)&space;-&space;r\sin^{7}(7\theta)" />
 13. Parametric curve equation
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;\sin(\theta)&space;-&space;\sin(2.3\theta)" />
-    * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;\cos(\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;\sin(\theta)&space;-&space;\sin(2.3\theta)" />
+  * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;\cos(\theta)" />
 14. Parametric curve equation
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin(\theta)&space;&plus;&space;r\sin(5\theta)&space;&plus;&space;r\cos(2.3\theta)" />
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos(\theta)&space;&plus;&space;r\cos(5\theta)&space;&plus;&space;r\sin(2.3\theta)" />
