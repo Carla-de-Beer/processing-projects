@@ -5,7 +5,7 @@ A cardioid curve circumscribing a heart curve. Both are based on parametric equa
 ## Curves generated
 </br>
 <p align="center">
-  <img src="images/screenShot.PNG" width="450px"/>
+  <img src="images/screenShot.png" width="450px"/>
 </p>
 
 ## Equations used
