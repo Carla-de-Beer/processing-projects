@@ -30,7 +30,7 @@ The following is a list of the sketches included in this repository:
 * [Parametric Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves) Various experiments with parametric and Lissajous curves
   * [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurves) 15 pre-defined parametric curve equations, including a set of Lissajous figures
   * [Parametric Heart Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricHeartCurves) A cardioid curve circumscribing a heart curve
-  * [Parametric Curve Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricGrid) Parametric curves on a 4 x 4 grid
+  * [Parametric Curve Grid:]https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurveGrid) Parametric curves on a 4 x 4 grid
 * [Phyllotaxis:](https://github.com/Carla-de-Beer/Processing/tree/master/Phyllotaxis) Sunflower-like construction based on phyllotaxis design principles
 * [Self-Organising Nets:](https://github.com/Carla-de-Beer/Processing/tree/master/Self-Organising%20Nets) Self-organising structures created by autonomous agents
   * [Self-Organising Net 2D:](https://github.com/Carla-de-Beer/Processing/tree/master/Self-Organising%20Nets/Self_Organising_Net_2D) Randomising a 2D mesh away from its original hexagonal structure
@@ -41,5 +41,8 @@ The following is a list of the sketches included in this repository:
   * [Distance Calculator With Map:](https://github.com/Carla-de-Beer/Processing/tree/master/TSP%20Distance%20Calculators/TSP_Distance_Calculator_With_Map) Genetic algorithm trained distance Calculator with map
   * [Distance Calculator Without Map:](https://github.com/Carla-de-Beer/Processing/tree/master/TSP%20Distance%20Calculators/TSP_Distance_Calculator_Without_Map) Genetic algorithm trained distance Calculator without map
 * [processing-java:](https://github.com/Carla-de-Beer/Processing/tree/master/processing-java) Example of how to run a Processing sketch from the command line (with parameters)   
+
+
+## Videos
 
 For video footage of this work in action, go to the Vimeo site: http://vimeo.com/carladebeer/videos.
