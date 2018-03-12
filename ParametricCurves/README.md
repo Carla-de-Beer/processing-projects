@@ -28,7 +28,7 @@ A Lissajous curve, also known as Lissajous figure or Bowditch curve, is the grap
 * <img
 src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;B\sin(b\theta)" />
 
-Lissajous figures therefore constitute a subset of parametric equations.
+Lissajous figures can be viewed as a subset of within the family of parametric equations.
 
 <br/>
 <p align="center">
