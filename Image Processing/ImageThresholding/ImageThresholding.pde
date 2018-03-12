@@ -1,6 +1,7 @@
+// Carla de Beer
+// Created: January 2018.
 // Image thresholding.
 // Algorithm adapted from: https://en.wikipedia.org/wiki/Thresholding_(image_processing)
-// Created: January 2018
 
 PImage img;
 

@@ -1,5 +1,5 @@
 // Carla de Beer
-// August 2016
+// Created: August 2016.
 // Parametrically controllable 3D SuperShape generator.
 
 // Based on Daniel Shiffman's Coding Train coding challenge:

@@ -1,5 +1,5 @@
 // Carla de Beer
-// February 2018
+// Created: February 2018.
 // Four double pendula with various settings.
 // Based on Daniel Shiffman's Coding Train coding challenge:
 // https://www.youtube.com/watch?v=uWzPe_S-RVE

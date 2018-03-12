@@ -1,4 +1,4 @@
-# Travelling Salesman Problem: Distance Calculator (With Map)
+# Travelling Salesman Problem: Distance Calculator (Without Map)
 
 This project demonstrates how a genetic algorithm can be used to find an optimised solution to the Travelling Salesman Problem.
 The sketch dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities.
@@ -15,5 +15,5 @@ http://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude
 
 </br>
 <p align="center">
-  <img src="gif/TSP Distance Calculator.gif"/>
+  <img src="images/screenShot.png" width="700px"/>
 </p>

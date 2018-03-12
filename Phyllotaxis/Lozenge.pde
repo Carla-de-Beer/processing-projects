@@ -1,5 +1,4 @@
 class Lozenge {
-
   float x, y, w;
   int n;
   float xoff, yoff;

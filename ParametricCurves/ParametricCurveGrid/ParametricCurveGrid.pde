@@ -1,8 +1,7 @@
 // Carla de Beer
-// January 2015
-// Parametric curve sketches on a 4 x 4 grid
+// Created: January 2015.
+// Parametric curve sketches on a 4 x 4 grid.
 
-public static final int STOP = 90;
 Curve [][] curves;
 int rows = 4; 
 int cols = 4;

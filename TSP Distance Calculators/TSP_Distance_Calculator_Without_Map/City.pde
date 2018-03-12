@@ -1,5 +1,4 @@
 class City {
-
   private double lon, lat;
   private String name;
 

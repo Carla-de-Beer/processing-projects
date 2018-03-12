@@ -1,10 +1,10 @@
+// Carla de Beer
+// Created: January 2018.
 // Images with a dot screen.
 // A simple form of resolution reduction by increasing the effective pixel size.
 // The size of each dot relates to the brightness level of the corresponding image spot.
-// Created: January 2018
 
 PImage img;
-
 static int DIVISON = 6;
 
 void setup() {

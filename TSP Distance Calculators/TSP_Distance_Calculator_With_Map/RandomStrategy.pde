@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 class RandomStrategy {
-
   private ArrayList<Route> populationList;
   private int numPop;
   private double crossoverRate;

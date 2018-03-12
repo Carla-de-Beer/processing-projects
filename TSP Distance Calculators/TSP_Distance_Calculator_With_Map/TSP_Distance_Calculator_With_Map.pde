@@ -1,5 +1,5 @@
 // Carla de Beer //<>//
-// September 2016; updated March 2017
+// Created: September 2016; updated March 2017.
 // Genetic algorithm to find an optimised solution to the Travelling Salesman Problem.
 // The sketch dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities.
 // The actual physical distance on the route, calculated as the Haversine distance, is also shown.

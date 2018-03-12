@@ -1,5 +1,5 @@
 // Carla de Beer
-// September 2016; updated March 2017
+// Created: September 2016; updated March 2017.
 // Genetic algorithm to find an optimised solution to the Travelling Salesman Problem.
 // The sketch dynamically reads in city data from a file and calculates the shortest distance it can find, linking all cities.
 // The actual physical distance on the route, calculated as the Haversine distance, is also shown.
@@ -42,8 +42,9 @@ ArrayList<City> path = new ArrayList();
 ArrayList<City> pathTrue = new ArrayList();
 ArrayList<Route> populationList = new ArrayList<Route>();
 
-color pink = color(245, 30, 95);
-color bg = color(30);
+color pink = color(255, 64, 64);
+//color pink = color(245, 30, 95);
+color bg = color(70);
 color white = color(250);
 color lightWhite = color(250);
 

@@ -1,5 +1,5 @@
 // Carla de Beer
-// Created November 2010; updated January 2014.
+// Created: November 2010; updated: January 2014.
 // Animated circle grid.
 
 Circle [][] grid;
@@ -23,7 +23,7 @@ void setup() {
 }
 
 void draw() { 
-  background(55);
+  background(128);
   pushMatrix();
   translate((width - (SPACING*(COLS-1)))/2, (height - (SPACING*(ROWS-1)))/2);
   for (int i = 0; i < COLS; ++i) {

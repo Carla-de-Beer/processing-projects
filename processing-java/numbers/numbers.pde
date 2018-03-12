@@ -1,5 +1,7 @@
+// Carla de Beer
+// Created: November 2016.
 // Command line entry:
-// processing-java --sketch=`pwd`/numbers --run text
+// processing-java --sketch=`pwd`/Numbers --run text
 
 import java.util.*;
 import java.text.*;

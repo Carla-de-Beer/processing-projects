@@ -1,12 +1,8 @@
 // Carla de Beer
-// January 2014
-// Hexagonal implementation of Daniel Shiffman's 2D CA
-
-// The Nature of Code
-// Daniel Shiffman
+// Created: January 2014.
+// A basic implementation of John Conway's Game of Life CA on a hexagonal grid.
+// Based on Daniel Shiffman's 2D CA implementation in "The Nature of Code":
 // http://natureofcode.com
-
-// A basic implementation of John Conway's Game of Life CA
 
 GOL gol;
 

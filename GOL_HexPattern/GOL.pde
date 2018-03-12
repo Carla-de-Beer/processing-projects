@@ -1,13 +1,4 @@
-// Hexagonal implementation of Daniel Shiffman's 2D CA
-
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// A basic implementation of John Conway's Game of Life CA
-
 class GOL {
-
   float w = 10;
   float h = sin(radians(60))*w;
   int columns, rows;
@@ -82,4 +73,3 @@ class GOL {
     }
   }
 }
-

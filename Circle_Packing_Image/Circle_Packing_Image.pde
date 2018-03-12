@@ -1,9 +1,10 @@
+// Carla de Beer
+// Created: January 2017.
 // Pointillated image creation with circle packing algorithm.
 // Based on Daniel Shiffman's Coding Train video series on animated circle packing:
 // https://www.youtube.com/watch?v=QHEQuoIKgNE
 // Image: Scheveningen Museum Beelden aan Zee
-// https://freewallpaperspictures.com/tag/images-photos/
-// Created: January 2017
+// https://freewallpaperspictures.com/tag/images-photos
 
 import java.util.*;
 import java.text.*;

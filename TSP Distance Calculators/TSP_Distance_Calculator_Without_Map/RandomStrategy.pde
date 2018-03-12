@@ -9,7 +9,6 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 class RandomStrategy {
-
   private int numPop;
   private int maxIter;
   private double crossoverRate;

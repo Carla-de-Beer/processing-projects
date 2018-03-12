@@ -1,5 +1,5 @@
 // Carla de Beer
-// November 2010
+// Created: November 2010.
 
 final int RADIUS = 20;
 

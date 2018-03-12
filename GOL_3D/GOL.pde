@@ -1,9 +1,4 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
 class GOL {
-
   int w = 10;
   int columns, rows;
   boolean colorOn = true;
@@ -74,4 +69,3 @@ class GOL {
     }
   }
 }
-

@@ -6,10 +6,10 @@ class Landscape {
   float max;
   float min, ave;
 
-  Landscape(int scl_, int w_, int h_) {
-    scl = scl_;
-    w = w_;
-    h = h_;
+  Landscape(int scl, int w, int h) {
+    this.scl = scl;
+    this.w = w;
+    this.h = h;
     cols = w/scl;
     rows = h/scl;
     z = new float[cols][rows];
@@ -81,4 +81,3 @@ class Landscape {
     }
   }
 }
-

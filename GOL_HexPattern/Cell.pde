@@ -1,13 +1,4 @@
-// Hexagonal implementation of Daniel Shiffman's 2D CA
-
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// A basic implementation of John Conway's Game of Life CA
-
 class Cell {
-
   float x, y;
   float w;
   float xoff;
@@ -16,10 +7,10 @@ class Cell {
   int state;
   int previous;
 
-  Cell(float x_, float y_, float w_) {
-    x = x_;
-    y = y_;
-    w = w_;
+  Cell(float x, float y, float w) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
 
     xoff = w/2;
     yoff = sin(radians(60))*w;

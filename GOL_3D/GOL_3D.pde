@@ -1,19 +1,15 @@
 // Carla de Beer
-// January 2014
-// 3D Implementation of John Conway's Game of Life CA,
-// based on Daniel Shiffman's Nature of Code 2D CA example
-
-// The Nature of Code
-// Daniel Shiffman
+// Created: January 2014.
+// 3D Implementation of John Conway's Game of Life CA.
+// Based on Daniel Shiffman's 2D CA example in "The Nature of Code":
 // http://natureofcode.com
-
-PVector eye;
-PVector center;
-PVector up;
 
 import processing.opengl.*;
 
 GOL gol;
+PVector eye;
+PVector center;
+PVector up;
 
 boolean noPause = true;
 import processing.dxf.*;

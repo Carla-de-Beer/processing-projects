@@ -2,5 +2,5 @@
 
 for i in {1..5}
 do
-	processing-java --sketch=`pwd`/numbers --run $i
+	processing-java --sketch=`pwd`/Numbers --run $i
 done

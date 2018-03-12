@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class Route {
-
   private ArrayList<City> chromosome;
   private double fitness;
   private double normFitness;

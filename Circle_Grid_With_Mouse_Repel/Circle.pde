@@ -6,10 +6,10 @@ class Circle {
   int originalxpos;
   int originalypos;
 
-  Circle (int _xpos, int _ypos, int _rad) { 
-    xpos = _xpos;
-    ypos = _ypos;
-    rad = _rad;
+  Circle (int xpos, int ypos, int rad) { 
+    this.xpos = xpos;
+    this.ypos = ypos;
+    this.rad = rad;
     originalxpos = xpos;
     originalypos = ypos;
     sp = 1;

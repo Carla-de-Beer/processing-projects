@@ -1,11 +1,11 @@
 // Carla de Beer
-// Created: January 2014
-// Updated: March 2018
-// Lissajous and parametric curve equations that generate geometric patterns.
+// Created: January 2014; updated: March 2018.
+// Parametric and Lissajous curve equations.
 // Inspiration taken from: "Chapter 10: Paramteric Equations and Polar Coordinates" in: 
 // STEWART, J., 2012. "Calculus Early Transcendentals". 7th Edition, p636 - 641.
 
-// Run the bash script executable from the terminal with the command `./runSketch <num>` where <num> in an integer value between 1 and 15.
+// Run the bash script executable from the terminal with the command `./runSketch <num>`
+// where <num> in an integer value between 1 and 15.
 
 int choice;
 float r = 165.0;
@@ -98,12 +98,12 @@ PVector getCoordinates(int choice) {
     y = 1.5*r*sin(10*theta);
     break;
   case 6:
-    // 6. Parametric curve equation (heart)
+    // 6. Parametric curve equation
     x = 1.5*r*pow(cos(5*theta*PI), 3);
     y = 1.5*r*pow(sin(4*theta*PI), 3);
     break;
   case 7:
-    // 7. Parametric curve equation
+    // 7. Parametric curve equation  (heart)
     x = 60*5*pow(sin(theta), 3);
     y = 60*(4*cos(theta) - 1.3*cos(2*theta) - 0.6*cos(3*theta) - 0.2*cos(4*theta)) + 25;
     break;  

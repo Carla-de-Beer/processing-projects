@@ -1,6 +1,6 @@
 // Carla de Beer
-// January 2015
-// Visualising music as a 3D landscape
+// Created: January 2015.
+// Visualising music as a 3D landscape.
 // A first experiment in the use of the Processing Midim library.
 // Based on Daniel Shiffman's "Landscape" example from "The Nature of Code".
 

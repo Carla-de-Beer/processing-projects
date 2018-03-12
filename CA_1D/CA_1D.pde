@@ -1,6 +1,6 @@
 // Carla de Beer
-// January 2015
-// 1D Cellular Automata played out on a 2D lozenge-shaped grid
+// Created: January 2015.
+// 1D Cellular Automata played out on a 2D lozenge-shaped grid.
 
 // Rule set
 // Modify the input values here:
@@ -31,7 +31,6 @@ void draw() {
   strokeWeight(0.5);
   pushMatrix();
   translate(0, width/n *sin(radians(60)));
-
 
   // Modify the input values here:
   for (int i = 0; i < num; ++i) {

@@ -1,8 +1,8 @@
-// December 2017 //<>//
+// Carla de Beer //<>//
+// Created: December 2017.
 // Image segmentation using the k-nearest neighbour algorithm.
 // Algorithm adapted from: https://en.wikipedia.org/wiki/Image_segmentation.
 // Press 'R' or 'r' to restart the sketch. A single mouse press halts the centroid recalculation.
-// Carla de Beer
 
 import processing.core.PFont;
 import java.util.*;

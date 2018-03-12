@@ -3,9 +3,9 @@
 Parametric equations are commonly used to express the coordinates of the points that make up a geometric object such as a curve or surface, in which case the equations are collectively called a parametric representation of the object.
 
 For example, the equations
-* <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos(\theta)" />
+* <img src="https://latex.codecogs.com/gif.latex?\bg_white&space;x=&space;r&space;\cos\theta" />
 * <img
-src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin(\theta)" />
+src="https://latex.codecogs.com/gif.latex?\bg_white&space;y=&space;r&space;\sin\theta" />
 
 form a parametric representation of the unit circle, where
 <img
@@ -31,6 +31,14 @@ src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;
 
 Lissajous figures therefore constitute a subset of parametric equations.
 
+<br/>
+<p align="center">
+  <img src="ParametricCurves/images/screenShot-04.png" width="250px"/>
+  <img src="ParametricCurves/images/screenShot-05.png" width="250px"/>
+  <img src="ParametricCurves/images/screenShot-06.png" width="250px"/>
+</p>
+
 This folder contains the following parametric sketches:
-* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/Parametric%20Curves/ParametricCurves) The sketch is run from the command line with one of the pre-defined parametric equations provided
-* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/Parametric%20Curves/ParametricGrid) A grid with a set of 4 x 4 parametric curves
+* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurves) The sketch is run from the command line with pre-defined parametric equations provided
+* [Parametric Heart Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricHeartCurves) A cardioid curve circumscribing a heart curve
+* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricGrid) A grid with a set of 4 x 4 parametric curves

@@ -3,8 +3,8 @@ class Curve {
   float theta;
   PVector vecPos;
 
-  Curve(PVector _vecPos) {
-    vecPos = _vecPos;
+  Curve(PVector vecPos) {
+    this.vecPos = vecPos;
     theta = 0.0;
   }
 

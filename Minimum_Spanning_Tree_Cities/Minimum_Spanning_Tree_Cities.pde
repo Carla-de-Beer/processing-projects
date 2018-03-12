@@ -1,5 +1,5 @@
 // Carla de Beer
-// November 2016; updated October 2017
+// Created: November 2016; updated October 2017.
 // Minimum Spanning Tree (Prim's Algorithm) connecting the 50 largest cities in the US.
 
 // Based on Daniel Shiffman's Minimum Spanning Tree solution from the Coding Train coding challenges series:

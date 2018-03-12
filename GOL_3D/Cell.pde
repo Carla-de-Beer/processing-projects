@@ -1,9 +1,4 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
 class Cell {
-
   float x, y, z, h;
   float w;
   float check = 0.5;
@@ -12,10 +7,10 @@ class Cell {
   int previous;
   int cap;
 
-  Cell(float x_, float y_, float w_) {
-    x = x_;
-    y = y_;
-    w = w_;
+  Cell(float x, float y, float w) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
     z = 0;
     h = 20;
     cap = 60;
@@ -70,7 +65,7 @@ class Cell {
         z = -20;
       }
     } else fill((1.8*h)%255);
-    
+
     stroke(10);
     strokeWeight(0.5);
     pushMatrix();

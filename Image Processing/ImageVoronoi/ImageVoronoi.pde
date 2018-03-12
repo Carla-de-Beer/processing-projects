@@ -1,7 +1,7 @@
-// December 2017 //<>//
+// Carla de Beer //<>//
+// Created: December 2017.
 // Using the k-nearest neighbour algorithm to break an image up into Voronoi colour fields.
 // Press 'R' or 'r' to restart the sketch. 
-// Carla de Beer
 
 import processing.core.PFont;
 import processing.data.FloatList;

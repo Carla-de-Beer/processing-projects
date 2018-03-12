@@ -1,15 +1,14 @@
 class Cell {
-
   float x, y;
   float w;
   float xoff;
   float yoff;
   boolean value;
 
-  Cell(float x_, float y_, float w_) {
-    x = x_;
-    y = y_;
-    w = w_;
+  Cell(float x, float y, float w) {
+    this.x = x;
+    this.y = y;
+    this.w = w;
 
     xoff = cos(radians(60))*w;
     yoff = sin(radians(60))*w;
@@ -33,4 +32,3 @@ class Cell {
     popMatrix();
   }
 }
-

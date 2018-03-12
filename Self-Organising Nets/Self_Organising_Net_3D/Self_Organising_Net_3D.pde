@@ -1,5 +1,5 @@
 // Carla de Beer
-// January 2014
+// Created: January 2014.
 // Self-organising net structure: 3D.
 // Wrapping a 2D mesh onto a 3D point cloud.
 // Press 'R' to restart, and 'U' to reverse the direction of steer.

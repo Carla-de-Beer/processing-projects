@@ -1,5 +1,4 @@
 class City {
-
   private float lon, lat;
   private String name;
 
