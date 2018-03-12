@@ -4,5 +4,5 @@ Animating a set of circles within a fixed grid pattern. This sketch was one of m
 
 </br>
 <p align="center">
-  <img src="gif/animated circle grid.gif"/>
+  <img src="images/screenShot.png" width="750px"/>
 </p>
