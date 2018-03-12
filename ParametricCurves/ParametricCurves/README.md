@@ -80,6 +80,7 @@ This sketch contains a set of 15 pre-defined parametric curve equations, includi
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x&space;=&space;r\sin\theta(a&space;-&space;b&space;-&space;c)" />
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y&space;=&space;r\cos\theta(a&space;-&space;b&space;-&space;c)" />
 
+## How to run this sketch
 This Processing sketch is run by means of a command line entry contained within the accompanying bash script file `runSketch`.
 This allows for an input parameter to be fed into the sketch (select an integer value between 1 and 15 to run the file with.).
 
