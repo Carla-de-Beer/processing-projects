@@ -74,41 +74,41 @@ void draw() {
 
   pushMatrix();
   canvas.translate(250, 175);
-  canvas.stroke(pendulum1.y2, 10, 255 - pendulum1.y2, 200);
+  canvas.stroke(pendulum1.pos2.y, 10, 255 - pendulum1.pos2.y, 200);
   if (frameCount > 1) {
-    canvas.line(pendulum1.px2, pendulum1.py2, pendulum1.x2, pendulum1.y2);
+    canvas.line(pendulum1.prev2.x, pendulum1.prev2.y, pendulum1.pos2.x, pendulum1.pos2.y);
     canvas.stroke(255, 0, 50, 100);
-    canvas.point(pendulum1.x1, pendulum1.y1);
+    canvas.point(pendulum1.pos1.x, pendulum1.pos1.y);
   }
   popMatrix();
 
   pushMatrix();
   canvas.translate(500, 0);
-  canvas.stroke(pendulum2.y2, 10, 255 - pendulum2.y2, 200);
+  canvas.stroke(pendulum2.pos2.y, 10, 255 - pendulum2.pos2.y, 200);
   if (frameCount > 1) {
-    canvas.line(pendulum2.px2, pendulum2.py2, pendulum2.x2, pendulum2.y2);
+    canvas.line(pendulum2.prev2.x, pendulum2.prev2.y, pendulum2.pos2.x, pendulum2.pos2.y);
     canvas.stroke(255, 0, 50, 100);
-    canvas.point(pendulum2.x1, pendulum2.y1);
+    canvas.point(pendulum2.pos1.x, pendulum2.pos1.y);
   }
   popMatrix();
 
   pushMatrix();
   canvas.translate(-500, 350);
-  canvas.stroke(50, 255 - pendulum3.y2, pendulum3.y2, 200);
+  canvas.stroke(50, 255 - pendulum3.pos2.y, pendulum3.pos2.y, 200);
   if (frameCount > 1) {
-    canvas.line(pendulum3.px2, pendulum3.py2, pendulum3.x2, pendulum3.y2);
+    canvas.line(pendulum3.prev2.x, pendulum3.prev2.y, pendulum3.pos2.x, pendulum3.pos2.y);
     canvas.stroke(255, 0, 50, 100);
-    canvas.point(pendulum3.x1, pendulum3.y1);
+    canvas.point(pendulum3.pos1.x, pendulum3.pos1.y);
   }
   popMatrix();
 
   pushMatrix();
   canvas.translate(500, 0);
-  canvas.stroke(50, 255 - pendulum4.y2, pendulum4.y2, 200);
+  canvas.stroke(50, 255 - pendulum4.pos2.y, pendulum4.pos2.y, 200);
   if (frameCount > 1) {
-    canvas.line(pendulum4.px2, pendulum4.py2, pendulum4.x2, pendulum4.y2);
+    canvas.line(pendulum4.prev2.x, pendulum4.prev2.y, pendulum4.pos2.x, pendulum4.pos2.y);
     canvas.stroke(255, 0, 50, 100);
-    canvas.point(pendulum4.x1, pendulum4.y1);
+    canvas.point(pendulum4.pos1.x, pendulum4.pos1.y);
   }
   popMatrix();
 
