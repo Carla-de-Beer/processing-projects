@@ -15,9 +15,8 @@ http://paulbourke.net/fractals/peterdejong/
 
 ## Curves generated
 <p align="center">
-  <img src="images/screenShot-01.png" width="155px"/>
-  <img src="images/screenShot-02.png" width="155px"/>
-  <img src="images/screenShot-03.png" width="155px"/>
-  <img src="images/screenShot-04.png" width="155px"/>
-  <img src="images/screenShot-05.png" width="155px"/>
+  <img src="images/screenShot-01.png" width="195px"/>
+  <img src="images/screenShot-03.png" width="195px"/>
+  <img src="images/screenShot-04.png" width="195px"/>
+  <img src="images/screenShot-05.png" width="195px"/>
 </p>
