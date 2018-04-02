@@ -7,5 +7,5 @@ Based on Daniel Shiffman's Coding Train videos:
 * https://www.youtube.com/watch?v=QQx_NmCIuCY
 
 <p align="center">
-  <img src="images/screenShot.png"/>
+  <img src="images/screenShot.png" width="650px"/>
 </p>
