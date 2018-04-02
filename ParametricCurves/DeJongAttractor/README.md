@@ -9,7 +9,6 @@ http://www.algosome.com/articles/strange-attractors-de-jong.html
 http://paulbourke.net/fractals/peterdejong/
 
 ## Equations used
-1. Standard De Jong Attractor equations
   * <img src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;x_{t&plus;1}&space;=&space;\sin(a\ast&space;y_{t})&space;-&space;\cos(b\ast&space;x_{t})" />
   * <img
   src="https://latex.codecogs.com/gif.latex?\inline&space;\bg_white&space;y_{t&plus;1}&space;=&space;\sin(c\ast&space;x_{t})&space;-&space;\cos(d\ast&space;y_{t})" />
