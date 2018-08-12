@@ -1,5 +1,4 @@
 # Processing
-
 [![GitHub issues](https://img.shields.io/github/issues/Carla-de-Beer/Processing.svg?style=flat-square)](https://github.com/Carla-de-Beer/Processing/issues)
 
 This repository contains .pde code for Processing sketches (refer http://processing.org/ for more information on Processing).
