@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=0L2n8Tg2FwI
 
 * Frog image:
   * The original image: 1,040,283 bytes.
-  * The segmented image: 613,827 bytes (this will vary depending on each segmentation initialisation).
+  * The dithered image: 613,827 bytes.
   * Compression rate: 59.005770545%.
 
 </br>
