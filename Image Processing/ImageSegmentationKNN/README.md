@@ -11,13 +11,13 @@ Algorithm adapted from: https://en.wikipedia.org/wiki/Image_segmentation.
 * Frog image:
   * The original image: 1,140,027 bytes.
   * The segmented image: 704,740 bytes (this will vary depending on each segmentation initialisation).
-  * Compression rate: 61.817834139%.
+  * Compression rate: 38.182165861%.
 
 
 * Polar image:
   * The original image: 940,641 bytes.
   * The segmented image: 606,035 bytes (this will vary depending on each segmentation initialisation).
-  * Compression rate: 64.427874183%.
+  * Compression rate: 35.572125817%.
 
 </br>
 <p align="center">
