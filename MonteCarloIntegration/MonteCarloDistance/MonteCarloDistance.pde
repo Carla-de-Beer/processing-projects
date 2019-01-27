@@ -1,5 +1,7 @@
 // Carla de Beer
-// Simple Monte Carlo Integration.
+// Simple Monte Carlo Integration using the a point's distance value 
+// to determine whether a random point is inside or outside the given shape.
+// This example uses a circle.
 // January 2019
 
 PGraphics canvas;
