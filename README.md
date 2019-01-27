@@ -26,7 +26,7 @@ The following is a list of the sketches included in this repository:
   * [Image Dot Screen:](https://github.com/Carla-de-Beer/Processing/tree/master/Image%20Processing/ImageDotScreen) A simple form of resolution reduction by increasing the effective pixel size.
   * [Image Voronoi:](https://github.com/Carla-de-Beer/Processing/tree/master/Image%20Processing/ImageVoronoi) Dividing an image into Voronoi colour fields.
 * [Minimum Spanning Tree (Cities):](https://github.com/Carla-de-Beer/Processing/tree/master/Minimum_Spanning_Tree_Cities) Using Prim's Algorithm to calculate the Minimum Spanning Tree to connect the 50 largest cities in the US.
-* [Monte Carlo Integration:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration) Simple Monte Carlo Integration simulations to calculate the area of a give shape, using random numbers..
+* [Monte Carlo Integration:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration) Simple Monte Carlo Integration simulations to calculate the area of a give shape, using random numbers.
 * [Parametric Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves) Various experiments with parametric and Lissajous curves.
   * [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurves) 15 pre-defined parametric curve equations, including a set of Lissajous figures.
   * [Parametric Heart Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricHeartCurves) A cardioid curve circumscribing a heart curve
