@@ -13,7 +13,7 @@ The following is a list of the sketches included in this repository:
 
 * [Animated Circle Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/Animated_Circle_Grid) Animating a set of circles within a fixed grid pattern.
 * [Animated NURBS Surface:](https://github.com/Carla-de-Beer/Processing/tree/master/Animated_NURBS_Surface) An animated NURBS surface imbued with movement through the addition of a particle spring system.
-* [1D Cellular Automata:](https://github.com/Carla-de-Beer/Processing/tree/master/CA_1D) 1D Cellular Automata played out on a 2D lozenge-shaped grid.
+* [1D Cellular Automata:](https://github.com/Carla-de-Beer/Processing/tree/master/CellularAutomata_1D) 1D Cellular Automata played out on a 2D lozenge-shaped grid.
 * [Circle Grid with Mouse Repel:](https://github.com/Carla-de-Beer/Processing/tree/master/Circle_Grid_With_Mouse_Repel) Use your mouse to temporarily shift circle positions out of place.
 * [Circle Packing Image:](https://github.com/Carla-de-Beer/Processing/tree/master/Circle_Packing_Image) Pointillated image creation with circle packing algorithm
 * [Double Pendulum:](https://github.com/Carla-de-Beer/Processing/tree/master/DoublePendulum) Four double pendula with various settings.
