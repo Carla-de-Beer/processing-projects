@@ -2,7 +2,7 @@
 
 Simple Monte Carlo Integration simulations to calculate the area of a give shape, using random numbers.
 
-### Distance metric (circle)
+### [Monte Carlo Distance:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration/MonteCarloDistance) Distance metric (circle)
 
 </br>
 <p align="center">
@@ -12,19 +12,19 @@ Simple Monte Carlo Integration simulations to calculate the area of a give shape
   <img src="MonteCarloDistance/images/screenShot-04.png" width="350px"/>
 </p>
 
-### Colour metric (circle)
+### [Monte Carlo Color:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration/MonteCarloColor) Colour metric (circle)
 </br>
 <p align="center">
   <img src="MonteCarloColor/images/screenShot-01.png" width="350px"/>
 </p>
 
-### Colour metric (regular polygon)
+### [Monte Carlo Polygon:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration/MonteCarloPolygon) Colour metric (regular polygon)
 </br>
 <p align="center">
   <img src="MonteCarloPolygon/images/screenShot-01.png" width="350px"/>
 </p>
 
-### Colour metric (irregular polygon)
+### [Monte Carlo Irregular:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration/MonteCarloIrregular) Colour metric (irregular polygon)
 </br>
 <p align="center">
   <img src="MonteCarloIrregular/images/screenShot-01.png" width="350px"/>

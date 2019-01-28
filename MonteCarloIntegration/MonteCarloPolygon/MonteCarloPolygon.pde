@@ -54,7 +54,7 @@ void draw() {
   strokeWeight(0.5);
   fill(120);
   text("Ratio: " + (float)count/(float)frameCount, 30, height-70);
-  text("Estimated circle area (square pixels): " + (float)count/(float)frameCount*1000000/4, 30, height-47.5);
+  text("Estimated shape area (square pixels): " + (float)count/(float)frameCount*1000000/4, 30, height-47.5);
   text("Error percentage: " + abs(1 - ((float)count/(float)frameCount*1000000/4)/(58800)), 30, height-25);
 
   fill(0, 255, 0, 100);
@@ -71,5 +71,5 @@ void draw() {
   vertex(20*7, 60*7);
   endShape(CLOSE);
 
-  println("Estimated circle area (square pixels): " + (float)count/(float)frameCount*1000000/4);
+  println("Estimated shape area (square pixels): " + (float)count/(float)frameCount*1000000/4);
 }
