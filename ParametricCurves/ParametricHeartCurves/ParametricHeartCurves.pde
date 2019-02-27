@@ -3,14 +3,16 @@
 // A cardioid curve circumscribing a heart curve. Both are based on parametric equations.
 
 final float INCREMENT = 0.025;
-ArrayList<PVector> heartList = new ArrayList<PVector>();
-ArrayList<PVector> cardidoidList = new ArrayList<PVector>();
+ArrayList<PVector> heartList;
+ArrayList<PVector> cardidoidList;
 float r = 165.0;
 float theta = 0.0;
 
 void setup() {
   size(650, 650);
   pixelDensity(displayDensity());
+  heartList = new ArrayList<PVector>();
+  cardidoidList = new ArrayList<PVector>();
 }
 
 void draw() {
@@ -24,16 +26,24 @@ void draw() {
   float cy = 140 * (sin(theta) * (1 - cos(theta)));
   cardidoidList.add(new PVector(cx, cy));
 
-  // 1. ---------------------------------- Heart curve
-
   background(255);
+
+  // 1. ---------------------------------- Axes
+  pushMatrix();
+  stroke(125);
+  strokeWeight(0.5);
+  noFill();
+  line(width/2 + 0.06, 50, width/2 + 0.06, height - 50);
+  line(50, height*0.5 - 146, width - 50, height*0.5 - 146);
+  popMatrix();
+
+  // 2. ---------------------------------- Heart curve
+
   pushMatrix();
   translate(width*0.5, height*0.5);
-
   strokeWeight(3);
   stroke(255, 10, 80, 200);
   noFill();
-  //fill(255, 10, 80, 10);
 
   beginShape();
   for (PVector v : heartList) {
@@ -42,16 +52,13 @@ void draw() {
   endShape();
 
   theta += INCREMENT;
-
   popMatrix();
 
-  // 2. ---------------------------------- Cardioid curve
+  // 3. ---------------------------------- Cardioid curve
   pushMatrix();
   strokeWeight(2.0);
-
   translate(width*0.5, height*0.5 - 146);
   rotate(-PI/2);
-
   stroke(120, 120);
   noFill();
 
@@ -60,22 +67,12 @@ void draw() {
     vertex(v.x, v.y);
   }
   endShape();
-
   popMatrix();
 
-  // 3. ---------------------------------- Axes
-  pushMatrix();
-  strokeWeight(0.5);
-  stroke(120);
-  line(width/2 + 0.06, 50, width/2 + 0.06, height - 50);
-  line(50, height*0.5 - 146, width - 50, height*0.5 - 146);
-  popMatrix();
 
   // Stop
-  if (heartList.size() > 1) {
-    if (heartList.get(0).dist(heartList.get(heartList.size()-1)) < 0.05) {
-      println("Full circle: DONE");
-      noLoop();
-    }
+  if (theta > TWO_PI) {
+    println("Full circle: DONE");
+    noLoop();
   }
 }
