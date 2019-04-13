@@ -19,6 +19,9 @@ The following is a list of the sketches included in this repository:
 * [Double Pendulum:](https://github.com/Carla-de-Beer/Processing/tree/master/DoublePendulum) Four double pendula with various settings.
 * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/GOL_3D) 3D implementation of the Conway's Game of Life CA.
 * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
+* [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/GIF%20Loops) Creating PNG images for a GIF loop.
+  * [Hearts GIF Code:](https://github.com/Carla-de-Beer/Processing/tree/master/GIF%20Loops/HeartsGIFcode) Code to generate a set of images of a cardioid curve circumscribing a heart curve.
+  * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/GIF%20Loops/OpenSimplex4DGIF) Code to generate a 4D OpenSimplex Perlin noise loop.
 * [Image Processing:](https://github.com/Carla-de-Beer/Processing/tree/master/Image%20Processing) Various image processing algorithms and techniques.
   * [Image Segmentation (K-Nearest Neighbour):](https://github.com/Carla-de-Beer/Processing/tree/master/Image%20Processing/ImageSegmentationKNN) Image segmentation using the k-nearest neighbour algorithm.
   * [Floyd-Steinberg Dithering:](https://github.com/Carla-de-Beer/Processing/tree/master/Image%20Processing/FloydSteinbergDithering) A dithering technique using error diffusion.

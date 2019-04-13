@@ -7,5 +7,5 @@ https://www.youtube.com/watch?v=nBKwCCtWlUg
 https://www.youtube.com/watch?v=l5I3Q1JFISE
 
 <p align="center">
-  <img src="images/noiseLoop.gif"/>
+  <img src="images/hearts.gif"/>
 </p>
