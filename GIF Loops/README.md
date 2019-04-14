@@ -1,13 +1,6 @@
 # GIF Loops
 
-GIF loops for a heart curve and 4D OpenSimpleNoise.
+Code to generate GIF loops for heart-shaped curves and 4D OpenSimpleNoise.
 
-Based on Daniel Shiffman's Coding Train coding challenges:
-
-Heart Curve
-https://www.youtube.com/watch?v=nBKwCCtWlUg
-https://www.youtube.com/watch?v=l5I3Q1JFISE
-
-4D OpenSimpleNoise
-https://www.youtube.com/watch?v=Lv9gyZZJPE0
-https://www.youtube.com/watch?v=3_0Ax95jIrk&t=574s
+* [Heart Curves GIF](https://github.com/Carla-de-Beer/Processing/tree/master/GIF%20Loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve.
+* [4D OpenSimpleNoise GIF](https://github.com/Carla-de-Beer/Processing/tree/master/GIF%20Loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map.
