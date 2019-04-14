@@ -7,5 +7,5 @@ https://www.youtube.com/watch?v=7_vKzcgpfvU&t=1336s
 https://www.youtube.com/watch?v=MY4luNgGfms
 
 <p align="center">
-  <img src="images/FourierTransformHeart.gif"/>
+  <img src="images/FourierTransformHeart.gif" width="600px"/>
 </p>
