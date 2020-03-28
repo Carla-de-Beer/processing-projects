@@ -40,9 +40,9 @@ The following is a list of the sketches included in this repository:
   *  [De Jong Attractor:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves/DeJongAttractor) A set of five pre-defined variables provided.
 * [Phyllotaxis:](https://github.com/Carla-de-Beer/Processing/tree/master/Phyllotaxis) Sunflower-like construction based on phyllotaxis design principles.
 * [Quad Tree:](https://github.com/Carla-de-Beer/Processing/tree/master/QuadTree) Basic quad tree implementation
-* [Self-Organising Nets:](https://github.com/Carla-de-Beer/Processing/tree/master/self-organising-nets) Self-organising structures created by autonomous agents.
-  * [Self-Organising Net 2D:](https://github.com/Carla-de-Beer/Processing/tree/master/self-organising-nets/Self_Organising_Net_2D) Randomising a 2D mesh away from its original hexagonal structure.
-  * [Self-Organising Net 3D:](https://github.com/Carla-de-Beer/Processing/tree/master/self-organising-nets/Self_Organising_Net_3D) Wrapping a 2D mesh onto a 3D point cloud
+* [Self-Organising Nets:](https://github.com/Carla-de-Beer/processing-projects/tree/master/self-organising-nets) Self-organising structures created by autonomous agents.
+  * [Self-Organising Net 2D:](https://github.com/Carla-de-Beer/processing-projects/tree/master/self-organising-nets/SelfOrganisingNet_2D) Randomising a 2D mesh away from its original hexagonal structure.
+  * [Self-Organising Net 3D:](https://github.com/Carla-de-Beer/processing-projects/tree/master/self-organising-nets/SelfOrganisingNet_3D) Wrapping a 2D mesh onto a 3D point cloud
 * [Soundscape:](https://github.com/Carla-de-Beer/Processing/tree/master/Soundscape) Visualising music as a 3D landscape.
 * [Super Shapes:](https://github.com/Carla-de-Beer/Processing/tree/master/SuperShapes) Parametrically controllable 3D SuperShape generator.
 * [Travelling Salesman Problem: Distance Calculator:](https://github.com/Carla-de-Beer/Processing/tree/master/tsp-distance-calculators) Using a genetic algorithm to find an optimised solution to the Travelling Salesman Problem.
