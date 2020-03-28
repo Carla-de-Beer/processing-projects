@@ -16,21 +16,21 @@ The following is a list of the sketches included in this repository:
 * [1D Cellular Automata:](https://github.com/Carla-de-Beer/Processing/tree/master/CellularAutomata_1D) 1D Cellular Automata played out on a 2D lozenge-shaped grid.
 * [Circle Grid with Mouse Repel:](https://github.com/Carla-de-Beer/Processing/tree/master/CircleGridMouseRepel) Use your mouse to temporarily shift circle positions out of place.
 * [Circle Packing Image:](https://github.com/Carla-de-Beer/Processing/tree/master/CirclePackingImage) Pointillated image creation with circle packing algorithm
-* [Conway's Game of Life:](https://github.com/Carla-de-Beer/Processing/tree/master/conways-games-of-life/)
-  * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-games-of-life/GOL_3D) 3D implementation of the Conway's Game of Life CA.
-  * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-games-of-life/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
+* [Conway's Game of Life:](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/)
+  * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_3D) 3D implementation of the Conway's Game of Life CA.
+  * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
 * [Double Pendulum:](https://github.com/Carla-de-Beer/Processing/tree/master/DoublePendulum) Four double pendula with various settings.
 * [Fourier Transformations:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations) Code to generate Fourier Transformations of a given input sequence.
   * [Discrete Fourier Tranformation of a Heart Curve:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations/FourierTransformHeart) Discrete Fourier Tranformation with epicycles using a heart curve as input.
 * [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops) Creating PNG images for a GIF loop.
   * [Heart Curves GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve.
   * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map.
-* [Image Processing:](https://github.com/Carla-de-Beer/Processing/tree/master/image-processing) Various image processing algorithms and techniques.
-  * [Image Segmentation (K-Nearest Neighbour):](https://github.com/Carla-de-Beer/Processing/tree/master/mage-processing/ImageSegmentationKNN) Image segmentation using the k-nearest neighbour algorithm.
-  * [Floyd-Steinberg Dithering:](https://github.com/Carla-de-Beer/Processing/tree/master/mage-processing/FloydSteinbergDithering) A dithering technique using error diffusion.
-  * [Image Thresholding:](https://github.com/Carla-de-Beer/Processing/tree/master/mage-processing/ImageThresholding) Thresholding: the simplest type of image segmentation.
-  * [Image Dot Screen:](https://github.com/Carla-de-Beer/Processing/tree/master/mage-processing/ImageDotScreen) A simple form of resolution reduction by increasing the effective pixel size.
-  * [Image Voronoi:](https://github.com/Carla-de-Beer/Processing/tree/master/mage-processing/ImageVoronoi) Dividing an image into Voronoi colour fields.
+* [Image Processing:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing) Various image processing algorithms and techniques.
+  * [Image Segmentation (K-Nearest Neighbour):](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN) Image segmentation using the k-nearest neighbour algorithm.
+  * [Floyd-Steinberg Dithering:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/FloydSteinbergDithering) A dithering technique using error diffusion.
+  * [Image Thresholding:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageThresholding) Thresholding: the simplest type of image segmentation.
+  * [Image Dot Screen:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageDotScreen) A simple form of resolution reduction by increasing the effective pixel size.
+  * [Image Voronoi:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageVoronoi) Dividing an image into Voronoi colour fields.
 * [Minimum Spanning Tree (Cities):](https://github.com/Carla-de-Beer/Processing/tree/master/MinimumSpanningTreeCities) Using Prim's Algorithm to calculate the Minimum Spanning Tree to connect the 50 largest cities in the US.
 * [Monte Carlo Integration:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration) Simple Monte Carlo Integration simulations to calculate the area of a give shape, using random numbers.
 * [Parametric Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves) Various experiments with parametric and Lissajous curves.
