@@ -26,11 +26,11 @@ The following is a list of the sketches included in this repository:
   * [Heart Curves GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve.
   * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map.
 * [Image Processing:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing) Various image processing algorithms and techniques.
-  * [Image Segmentation (K-Nearest Neighbour):](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN) Image segmentation using the k-nearest neighbour algorithm.
-  * [Floyd-Steinberg Dithering:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/FloydSteinbergDithering) A dithering technique using error diffusion.
-  * [Image Thresholding:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageThresholding) Thresholding: the simplest type of image segmentation.
+  * [Floyd-Steinberg Dithering:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/FloydSteinbergDithering) A dithering technique using error diffusion, meaning it pushes the residual quantisation error of a pixel onto its neighbouring pixels, to be dealt with later.
   * [Image Dot Screen:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageDotScreen) A simple form of resolution reduction by increasing the effective pixel size.
-  * [Image Voronoi:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageVoronoi) Dividing an image into Voronoi colour fields.
+  * [Image Segmentation K-Nearest Neighbour:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageSegmentationKNN) Image segmentation using the k-nearest neighbour algorithm.
+  * [Image Thresholding:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageThresholding) Thresholding is the simplest method of image segmentation.
+  * [Image Voronoi:](https://github.com/Carla-de-Beer/processing-projects/tree/master/image-processing/ImageVoronoi) Using the k-nearest neighbour algorithm to break an image up into Voronoi colour fields.
 * [Minimum Spanning Tree (Cities):](https://github.com/Carla-de-Beer/Processing/tree/master/MinimumSpanningTreeCities) Using Prim's Algorithm to calculate the Minimum Spanning Tree to connect the 50 largest cities in the US.
 * [Monte Carlo Integration:](https://github.com/Carla-de-Beer/Processing/tree/master/MonteCarloIntegration) Simple Monte Carlo Integration simulations to calculate the area of a give shape, using random numbers.
 * [Parametric Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves) Various experiments with parametric and Lissajous curves.
