@@ -20,6 +20,7 @@ The following is a list of the sketches included in this repository:
   * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_3D) 3D implementation of the Conway's Game of Life CA.
   * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
 * [Double Pendulum:](https://github.com/Carla-de-Beer/Processing/tree/master/DoublePendulum) Four double pendula with various settings.
+* [Fidenza:](https://github.com/Carla-de-Beer/processing-projects/tree/master/Fidenza) Processing version of a simple Fidenza-like implementation.
 * [Fourier Transformations:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations) Code to generate Fourier Transformations of a given input sequence.
   * [Discrete Fourier Tranformation of a Heart Curve:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations/FourierTransformHeart) Discrete Fourier Tranformation with epicycles using a heart curve as input.
 * [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops) Creating PNG images for a GIF loop.
