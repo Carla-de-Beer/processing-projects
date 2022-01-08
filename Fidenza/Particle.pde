@@ -15,9 +15,9 @@ public class Particle {
   color col;
   int widthParticle;
 
-  int rand = (int) random(5);
-  int randCol1 = (int) random(5);
-  int randCol2 = (int) random(5);
+  int rand = (int) random(colors.length);
+  int randCol1 = (int) random(colors.length);
+  int randCol2 = (int) random(colors.length);
 
   ArrayList<PVector> history = new ArrayList<>();
 
@@ -103,7 +103,7 @@ public class Particle {
     beginShape();
     strokeWeight(widthParticle);
     if (history.size() > 4) {
-      for (int i = 0; i < 5; ++i) {
+      for (int i = 0; i < colors.length; ++i) {
         PVector v1 = history.get(i);
         if (rand < 4) {
           stroke(colors[randCol1]);
