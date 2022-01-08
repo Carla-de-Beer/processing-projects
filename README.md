@@ -16,6 +16,7 @@ The following is a list of the sketches included in this repository:
 * [1D Cellular Automata:](https://github.com/Carla-de-Beer/Processing/tree/master/CellularAutomata_1D) 1D Cellular Automata played out on a 2D lozenge-shaped grid.
 * [Circle Grid with Mouse Repel:](https://github.com/Carla-de-Beer/Processing/tree/master/CircleGridMouseRepel) Use your mouse to temporarily shift circle positions out of place.
 * [Circle Packing Image:](https://github.com/Carla-de-Beer/Processing/tree/master/CirclePackingImage) Pointillated image creation with circle packing algorithm
+* [Colors80xLines800:](https://github.com/Carla-de-Beer/Processing/tree/master/Colors80xLines800) 80 colours spread over 800 lines
 * [Conway's Game of Life:](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/)
   * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_3D) 3D implementation of the Conway's Game of Life CA.
   * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
