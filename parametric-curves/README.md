@@ -40,8 +40,8 @@ Lissajous figures can be viewed as a subset of within the family of parametric e
 </p>
 
 This folder contains the following parametric sketches:
-* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurves) The sketch is run from the command line with pre-defined parametric equations provided.
-* [Parametric Heart Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricHeartCurves) A cardioid curve circumscribing a heart curve.
-* [Parametric Heart Curves (GIF code):](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricHeartsCurvesGIF) A cardioid curve circumscribing a heart curve.
-* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/ParametricCurveGrid) A grid with a set of 4 x 4 parametric curves.
-* [De Jong Attractor:](https://github.com/Carla-de-Beer/Processing/tree/master/ParametricCurves/DeJongAttractor) De Jong attractor with a set of pre-defined variables provided.
+* [Parametric and Lissajous Curves:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves/ParametricCurves) The sketch is run from the command line with pre-defined parametric equations provided.
+* [Parametric Heart Curves:](https://github.com/Carla-de-Beer/processing-projects/tree/master/parametric-curves/ParametricHeartCurves) A cardioid curve circumscribing a heart curve.
+* [Parametric Heart Curves (GIF code):](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves/ParametricHeartsCurvesGIF) A cardioid curve circumscribing a heart curve.
+* [Parametric Grid:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves/ParametricCurveGrid) A grid with a set of 4 x 4 parametric curves.
+* [De Jong Attractor:](https://github.com/Carla-de-Beer/Processing/tree/master/parametric-curves/DeJongAttractor) De Jong attractor with a set of pre-defined variables provided.
