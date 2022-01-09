@@ -16,15 +16,16 @@ The following is a list of the sketches included in this repository:
 * [1D Cellular Automata:](https://github.com/Carla-de-Beer/Processing/tree/master/CellularAutomata_1D) 1D Cellular Automata played out on a 2D lozenge-shaped grid.
 * [Circle Grid with Mouse Repel:](https://github.com/Carla-de-Beer/Processing/tree/master/CircleGridMouseRepel) Use your mouse to temporarily shift circle positions out of place.
 * [Circle Packing Image:](https://github.com/Carla-de-Beer/Processing/tree/master/CirclePackingImage) Pointillated image creation with circle packing algorithm
-* [Colors80xLines800:](https://github.com/Carla-de-Beer/Processing/tree/master/Colors80xLines800) 80 colours spread over 800 lines
 * [Conway's Game of Life:](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/)
   * [Conway's Game of Life (3D):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_3D) 3D implementation of the Conway's Game of Life CA.
   * [Conway's Game of Life (Hexagonal Pattern):](https://github.com/Carla-de-Beer/Processing/tree/master/conways-game-of-life/GOL_HexPattern) Hexagonal implementation of the Conway's Game of Life CA.
-* [Destroy a Square:](https://github.com/Carla-de-Beer/Processing/tree/master/DestroySquare) A grid with squares that gradually rotate out of position.
 * [Double Pendulum:](https://github.com/Carla-de-Beer/Processing/tree/master/DoublePendulum) Four double pendula with various settings.
-* [Fidenza:](https://github.com/Carla-de-Beer/processing-projects/tree/master/Fidenza) Processing version of a simple Fidenza-like implementation.
 * [Fourier Transformations:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations) Code to generate Fourier Transformations of a given input sequence.
   * [Discrete Fourier Tranformation of a Heart Curve:](https://github.com/Carla-de-Beer/Processing/tree/master/fourier-transformations/FourierTransformHeart) Discrete Fourier Tranformation with epicycles using a heart curve as input.
+* [Genuary 2022:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022) Sketches created as part of Genuary 2022.
+  * [Colors80xLines800:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/Colors80xLines800) 80 colours spread over 800 lines
+  * [Destroy a Square:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/DestroySquare) A grid with squares that gradually rotate out of position.
+  * [Fidenza:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Fidenza) Processing version of a simple Fidenza-like implementation.
 * [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops) Creating PNG images for a GIF loop.
   * [Heart Curves GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve.
   * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map.

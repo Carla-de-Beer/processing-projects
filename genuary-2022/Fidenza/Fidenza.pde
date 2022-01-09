@@ -82,6 +82,6 @@ void mousePressed() {
 
 void keyPressed() {
   if (key == 'P' || key == 'p') {
-    saveFrame("fidenza-###.png");
+    saveFrame("images/fidenza-###.png");
   }
 }
