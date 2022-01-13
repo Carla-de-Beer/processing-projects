@@ -26,6 +26,7 @@ The following is a list of the sketches included in this repository:
   * [Colors80xLines800:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/Colors80xLines800) 80 colours spread over 800 lines
   * [Destroy a Square:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/DestroySquare) A grid with squares that gradually rotate out of position
   * [Fidenza:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Fidenza) Processing version of a simple Fidenza-like implementation
+  * [Thresholding with Three Colours:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Thresholding3Colors) Image thresholding with 3 colours.
 * [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops) Creating PNG images for a GIF loop
   * [Heart Curves GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve
   * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map
