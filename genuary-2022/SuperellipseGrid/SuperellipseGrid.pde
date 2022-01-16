@@ -44,10 +44,6 @@ void draw() {
       popMatrix();
     }
   }
-  
-  if (frameCount > 300) {
-      saveFrame("gif/grid-###.png");
-  }
 }
 
 void keyPressed() {
