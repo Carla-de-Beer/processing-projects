@@ -12,7 +12,7 @@ int offset = 65;
 
 Ellipse[][] grid;
 
-color[] colors = {#2E294E, #541388, #F1E9DA, #FFD400, #D90368};
+color[] colors = {#541388, #F1E9DA, #FFD400, #D90368};
 
 void setup() {
   size(700, 700);
@@ -25,14 +25,14 @@ void setup() {
     for (int j = 0; j < rows; j++) {
       float n = random(0.1, 1);
       float theta = random(0, 10);
-      int colValue = (int) random(5);
+      int colValue = (int) random(colors.length);
       grid[i][j] = new Ellipse(n, theta, colValue);
     }
   }
 }
 
 void draw() {
-  background(81);
+  background(#2E294E);
   translate(57, 57);
 
   for (int i = 0; i < cols; i++) {
@@ -43,5 +43,15 @@ void draw() {
       grid[i][j].update();
       popMatrix();
     }
+  }
+  
+  if (frameCount > 300) {
+      saveFrame("gif/grid-###.png");
+  }
+}
+
+void keyPressed() {
+  if (key == 'P' || key == 'p') {
+    saveFrame("images/grid-###.png");
   }
 }
