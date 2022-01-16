@@ -3,6 +3,7 @@
 Image thresholding with 3 colours (part of Genuary 2022: 3 colors).
 
 
+</br>
 <p align="center">
   <img src="images/threshold-07.png" width="400px"/>
   <img src="images/threshold-08.png" width="400px"/>
