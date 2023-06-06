@@ -26,7 +26,7 @@ The following is a list of the sketches included in this repository:
   * [Colors80xLines800:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/Colors80xLines800) 80 colours spread over 800 lines
   * [Destroy a Square:](https://github.com/Carla-de-Beer/Processing/tree/master/genuary-2022/DestroySquare) A grid with squares that gradually rotate out of position
   * [Fidenza:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Fidenza) Processing version of a simple Fidenza-like implementation
-  * [Thresholding with Three Colours:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Thresholding3Colors) Image thresholding with 3 colours.
+  * [Thresholding with Three Colours:](https://github.com/Carla-de-Beer/processing-projects/tree/master/genuary-2022/Thresholding3Colors) Image thresholding with 3 colours
 * [GIF Loops:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops) Creating PNG images for a GIF loop
   * [Heart Curves GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/HeartCurvesGIF) Code to generate a set of images for a GIF of a cardioid curve circumscribing a heart curve
   * [4D OpenSimplexNoise GIF:](https://github.com/Carla-de-Beer/Processing/tree/master/gif-loops/OpenSimplex4DGIF) Code to generate a set of images for a GIF of 4D OpenSimplex Perlin noise map
@@ -53,6 +53,7 @@ The following is a list of the sketches included in this repository:
 * [Travelling Salesman Problem: Distance Calculator:](https://github.com/Carla-de-Beer/Processing/tree/master/tsp-distance-calculators) Using a genetic algorithm to find an optimised solution to the Travelling Salesman Problem
   * [Distance Calculator With Map:](https://github.com/Carla-de-Beer/Processing/tree/master/tsp-distance-calculators/TSP_Distance_Calculator_With_Map) Genetic algorithm trained distance Calculator with map
   * [Distance Calculator Without Map:](https://github.com/Carla-de-Beer/Processing/tree/master/tsp-distance-calculators/TSP_Distance_Calculator_Without_Map) Genetic algorithm trained distance Calculator without map
+* [processing-eclipse:](https://github.com/Carla-de-Beer/Processing/tree/master/processing-eclipse) Example of how to incorporate a Processing sketch within a Java program
 * [processing-java:](https://github.com/Carla-de-Beer/Processing/tree/master/processing-java) Example of how to run a Processing sketch from the command line (with parameters)
 
 
